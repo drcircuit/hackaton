@@ -62,7 +62,7 @@ module.exports = {
       ]
     },
     {
-      _id: 'projid1',
+      _id: 'projid42',
       created: '12d341235124334',
       title: 'African Outbreak',
       short_description:
@@ -93,7 +93,7 @@ module.exports = {
       ]
     },
     {
-      _id: 'projid1',
+      _id: 'projid69',
       created: '12d341235124334',
       title: 'African Outbreak',
       short_description:

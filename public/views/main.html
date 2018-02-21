@@ -23,10 +23,12 @@
   </div>
 
   <div ng-repeat="row in projects" class="row twoProj">
-      <div ng-style="{'background-image' :'url(' + project.img + ')', 'background-repeat':'no-repeat', 'background-size': 'cover','height': '249px', 'padding':'0px;'}" ng-repeat="project in row" class=" projImg col-6">
+      <div ng-style="{'background-image' :'url(' + project.img + ')', 'background-repeat':'no-repeat', 'background-size': 'cover','height': '249px', 'padding':'0px;'}" ng-repeat="project in row" class="projImg col-6">
+          <!-- <img class="projImg col-12" ng-src="{{project.img}}"/> -->
           <div class="projTitle">{{project.title}}</div>
-          <img id="fundingImg" src="./img/circle.png"/>
+          <div id="id{{project.index}}" circle percent="{{project.percent}}">
+          </div>
       </div>
     </div>
-
+<span ></span>
 </div>

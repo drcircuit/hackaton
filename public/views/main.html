@@ -1,3 +1,34 @@
-<div>
-    <h1>Hello Ship A Doc</h1>
+<div class="container">
+    <nav class="row navbar navbar-expand-lg navbar-light ">
+      <img class="col-1" id="profileImg" src="./img/redcross.jpg"/>
+      <a class="col-6 navbar-brand navbarNav"></a>
+      <a class="col-1 navbar-brand navbarNav" href="#">News</a>
+      <a class="col-1 navbar-brand" href="#">Blog</a>
+      <a class="col-1 navbar-brand" href="#">Projects</a>
+      <img class="col-1" id="profileImg" src="./img/profile.jpeg"/>
+    </nav>
+
+
+  <div class="row">
+    <div class="imgWithText">
+      <img class="col" src="./img/banner.png"/>
+      <div class="mainText">Help us help others</div>
+      <div id="sub1" class="subText">82% Something</div>
+      <div id="sub2" class="subText">15% thats right</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col"><h3 class="header">CURRENT PROJECTS</h3></div>
+  </div>
+
+  <div ng-repeat="row in projects" class="row twoProj">
+      <div ng-style="{'background-image' :'url(' + project.img + ')', 'background-repeat':'no-repeat', 'background-size': 'cover','height': '249px', 'padding':'0px;'}" ng-repeat="project in row" class="projImg col-6">
+          <!-- <img class="projImg col-12" ng-src="{{project.img}}"/> -->
+          <div class="projTitle">{{project.title}}</div>
+          <div id="id{{project.index}}" circle percent="{{project.percent}}">
+          </div>
+      </div>
+    </div>
+<span ></span>
 </div>

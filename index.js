@@ -26,9 +26,9 @@ const contracts = require("./repositories/contract.js")(web3, "0x8814894d7b0b426
     .then(adr => {
         console.log("Created contract addr", adr)
     })*/
-contracts.getStatus("0xbd37A601265d90EC90b9b233991488B90A39a2eb")
+contracts.getFunders("0xd6E816b4EEe55e8C2eB7E3af5B60AaEf53AD256F")
     .then(a => {
-        console.log("status:", a)
+        console.log("funders:", a)
     })
 
 // Connect to mongoDb and do the inital set-up of adding dummy data to fill the database

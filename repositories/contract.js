@@ -98,6 +98,22 @@ module.exports = (web3, public, pass) => {
                         created: a[5],
                     }
                 })
+        },
+        // event Funding(address backer, uint amount, uint id);
+        // Figure out a list of all the funders of this project and return
+        getFunders: (adr) => {
+            let contract = new web3.eth.Contract(abi, adr, createSet);
+            return contract.getPastEvents('Funding',{fromBlock: 0,
+                toBlock: 'latest'})
+                .then(e => {
+                    return e.map(e => {
+                        return {
+                            from: e.returnValues.backer,
+                            amount: e.returnValues.amount,
+                            id: e.returnValues.myid,
+                        }
+                    })
+                })
         }
     }
 }

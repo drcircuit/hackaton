@@ -25,8 +25,11 @@
         .controller("mainController", ["$scope", "api", function ($scope, api) {
             api.projects()
                 .then(function (res) {
-                    console.log(res.data);
-                    $scope.projects = res.data;
+                    var colsPerRow = 2;
+                    $scope.projects = res.data.reduce(function(rows, key, index) {
+                        return (index %  colsPerRow === 0 ? rows.push([key]) : rows[rows.length - 1].push(key)) && rows;
+                    }, []);
+                    console.log($scope.projects);
                 })
                 .catch(function (err) {
                     $scope.error = err;

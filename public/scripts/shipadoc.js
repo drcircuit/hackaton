@@ -149,6 +149,13 @@
                     var converter = new showdown.Converter();
                     $scope.project.description = converter.makeHtml($scope.project.description);
                     createProgress($scope.progress, "div#content", 50);
+                    Promise.all($scope.project.interested.map(function(d){ return api.doctor(d)}))
+                        .then(function(stuff){
+                            console.log(stuff);
+                        })
+                        .catch(function(err){
+                            console.log(err);
+                        });
                 })
                 .catch(function(err){
                     console.log(err);

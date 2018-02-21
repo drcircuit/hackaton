@@ -65,6 +65,12 @@ module.exports = (uri, contracts) => {
                         no: no,
                     })
                 })
-        }
+        },
+    getdoctors: (id) => {
+            return connectDb()
+                .then(db => {
+                    return db.collection("doctors").findOne({"_id": id});
+            });
+    }
     }
 }

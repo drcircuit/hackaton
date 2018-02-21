@@ -25,7 +25,7 @@ body {
 
 /*-------NAVBAR-------*/
 
-#navbarNav {
+.navbarNav {
   position: relative;
   float: right;
 }

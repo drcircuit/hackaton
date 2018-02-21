@@ -1,7 +1,24 @@
-<div class="jumbotron jumbotron-fluid" ng-style="{'background-image' :'url(' + project.bigimg + ')'}">
-    <div class="container">
+<div class="jumbotron jumbotron-fluid"
+     ng-style="{'background-image' :'url(' + project.bigimg + ')', 'height': '549px'}">
+    <div class="project-single">
 
-        <h1>{{project.title}}</h1>
-        <p>Think BIG with a Bootstrap Jumbotron!</p>
+        <div class="imgbox">
+            <h1>{{project.title}}</h1>
+        </div>
+        <img class="logo" src="{{project.logo}}" alt="">
+        <div class="col-8">
+            <div class="col-2">
+                <img src="./img/doctorsicon.png" alt="">
+            </div>
+            <div class="col-2">
+                <img src="./img/fundersicon.png" alt="">
+            </div>
+            <div class="col-2">
+                <img src="./img/fundingicon.png" alt="">
+            </div>
+            <div class="col-2">
+                <img src="./img/fundingicon.png" alt="">
+            </div>
+        </div>
     </div>
 </div>

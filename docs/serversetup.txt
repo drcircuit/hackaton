@@ -28,3 +28,6 @@ sudo ufw allow 22
 sudo ufw enable
 sudo ufw allow 30303  
 sudo ufw allow 8545 # To be disabled later
+
+# Create a restart file such that we can easily restart
+cd /hackaton && git clone https://github.com/drcircuit/hackaton.git code

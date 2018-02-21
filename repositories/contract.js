@@ -98,7 +98,6 @@ module.exports = (web3, public, pass) => {
                         reclaimDeadline: a[4],
                     }
                 })
-
         }
     }
 }

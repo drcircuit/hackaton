@@ -56,7 +56,6 @@ module.exports = (db, contracts) => {
                     })
             }
         })
-
     });
 
     // Create an id mapping for using with the contract creation
@@ -69,7 +68,6 @@ module.exports = (db, contracts) => {
             } else {
                 // Create a "random" (this is not very safe) id that you can use for funding
                 let mr = "a" + rand(1e14)
-                console.log(r)
                 db.createFundMap(pid, mr).then(ra => {
                     res.json({"contract": r.contract,"tempid": mr})
                 })

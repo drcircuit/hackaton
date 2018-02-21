@@ -27,6 +27,9 @@ const contracts = require("./repositories/contract.js")(web3, "0x8814894d7b0b426
         console.log("Created contract addr", adr)
     })*/
 contracts.getStatus("0x61400340b0F89C112CAE72e5F7B14C4090A7f48c")
+    .then(a => {
+        console.log("status:", a)
+    })
 
 // Connect to mongoDb and do the inital set-up of adding dummy data to fill the database
 console.log("connecting to mongodb://"+ip+":27017")
@@ -34,6 +37,6 @@ const db = require("./repositories/db.js")("mongodb://"+ip+":27017", contracts)
 db.init()
 
 // Register all the routes we want to use
-app.use("/api/projects", require("./routes/projects.js")(db));
+app.use("/api/projects", require("./routes/projects.js")(db, contracts));
 
 app.listen(port, () => console.log('Server listening on port ' +port +' !'))

@@ -78,13 +78,27 @@ module.exports = (web3, public, pass) => {
         transfer: (amount, to) => {
             
         },
-        // Get the current status of the contract and return it
+        // Get the current status of the contract and return it as a promiss object
         getStatus: (adr) => {
             let contract = new web3.eth.Contract(abi, adr, createSet);
-            console.log("contract", contract)
-            console.log(adr, "adr")
-            contract.methods.goal().call(createSet)
-                .then(a => {console.log("rec", recOrg)})
+            let arr = [
+                contract.methods.recOrg().call(createSet),
+                contract.methods.goal().call(createSet),
+                contract.methods.raised().call(createSet),
+                contract.methods.deadline().call(createSet),
+                contract.methods.reclaimDeadline().call(createSet)
+            ]
+            return Promise.all(arr)
+                .then(a => {
+                    return {
+                        recOrg: a[0],
+                        goal: a[1],
+                        raised: a[2],
+                        deadline: a[3],
+                        reclaimDeadline: a[4],
+                    }
+                })
+
         }
     }
 }

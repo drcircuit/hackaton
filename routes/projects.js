@@ -9,22 +9,24 @@ module.exports = (db, contracts) => {
     
     // Function to take a db project object and use the web3 contracts interface
     // to fill with more information to use
-    
+    function fillProject(p) {
+        let adr = p.contract;
+        return contracts.getStatus(adr)
+    }
 
 
     // Return general info about all the projects
     router.get("/", (req, res) => {
         db.listprojects().then(r => {
-            // Map over some fields
+            // Map over some fields to rename and remove as expected
             r = r.map(it => {
                 it.id = it._id
                 delete it._id
                 delete it.interested
                 delete it.description
-                return it
+                return fillProject(it)
             })
-            // We also need to read out the data 
-            res.json(r)
+            r.then(res.json)
         })
     });
 

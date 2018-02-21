@@ -1,0 +1,28 @@
+{
+  "name": "hackaton",
+  "version": "1.0.0",
+  "description": "New Tech Lab hackaton",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drcircuit/hackaton.git"
+  },
+  "keywords": [
+    "ntl"
+  ],
+  "author": "New Tech Lab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drcircuit/hackaton/issues"
+  },
+  "homepage": "https://github.com/drcircuit/hackaton#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

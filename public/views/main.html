@@ -1,18 +1,18 @@
 <div class="container">
-  <div class="row navBar">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">Logo</a>
+  <div class="row navBar navbarNav">
+    <nav class="navbar navbar-expand-lg navbar-light col">
+      <img id="profileImg" src="./img/redcross.jpg"/>
       <a class="navbar-brand navbarNav" href="#">News</a>
       <a class="navbar-brand" href="#">Blog</a>
       <a class="navbar-brand" href="#">Projects</a>
-      <a class="navbar-brand" href="#">Profile</a>
+      <img id="profileImg" src="./img/profile.jpeg"/>
     </nav>
   </div>
 
 
   <div class="row">
     <div class="banner imgWithText">
-      <img class="col" ng-src="{{projects[0].bigimg}}"/>
+      <img class="col" ng-src="{{projects[0][0].bigimg}}"/>
       <div class="top-left">Help us help others</div>
       <div class="bottom-left">82% Something</div>
     </div>
@@ -22,10 +22,11 @@
     <div class="col"><h3 class="header">CURRENT PROJECTS</h3></div>
   </div>
 
-  <div class="row">
-      <div ng-repeat="project in projects" class="project">
-        <img class="col projImg" ng-src="{{project.img}}"/>
-        <div class="col projTitle">{{project.title}}</div>
+  <div ng-repeat="row in projects" class="row">
+      <div ng-repeat="project in row" class="col-6">
+          <img class="projImg" ng-src="{{project.img}}"/>
+          <div class="projTitle">{{project.title}}</div>
       </div>
     </div>
+
 </div>

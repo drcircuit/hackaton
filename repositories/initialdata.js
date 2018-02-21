@@ -39,7 +39,11 @@ module.exports = {
     {
       _id: 'projid3',
       created: '12341235124334',
+<<<<<<< Updated upstream
       title: 'REd Einar vaccinations',
+=======
+      title: 'Red Einar vaccinations',
+>>>>>>> Stashed changes
       short_description:
         'This is a short intro text that can be seen on the landing page',
       logo: 'http://localhost:8080/img/docsnoborderslogo.png',

@@ -4,4 +4,4 @@ cd /hackroot/code
 git pull origin master
 killall node nodejs | true
 npm install
-sudo node ./index.js
+sudo nohup node ./index.js &>> /hackroot/server.log&

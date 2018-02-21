@@ -10,7 +10,7 @@ module.exports = {
         "location": "Middlefart, Denmark",
         "status": "planned",
         "description": "#big project \nThis is the long text to show, formated as markdown?",
-        "contract": "0x0D04b0F323eEe5968573ab958fAb0295Ec44343a",
+        "contract": "0xbd37A601265d90EC90b9b233991488B90A39a2eb",
         "interested": ["d1", "d2", "d3"],
         "funders": ["arne","linda","rigmor","wayne","garreth","carlos","joann","nieke"]
     }, {
@@ -25,7 +25,7 @@ module.exports = {
         "doctorsNeeded": 3,
         "description": "#big project \nThis is the long text to show, formated as markdown?",
         "status": "planned",
-        "contract": "0x0D04b0F323eEe5968573ab958fAb0295Ec44343a",
+        "contract": "0xbd37A601265d90EC90b9b233991488B90A39a2eb",
         "interested": ["d1", "d2", "d3"],
         "funders": ["arne","linda","rigmor","wayne","garreth","carlos","joann","nieke"]
     }, {
@@ -40,7 +40,7 @@ module.exports = {
         "doctorsNeeded": 3,
         "description": "#big project \nThis is the long text to show, formated as markdown?",
         "status": "planned",
-        "contract": "0x0D04b0F323eEe5968573ab958fAb0295Ec44343a",
+        "contract": "0xbd37A601265d90EC90b9b233991488B90A39a2eb",
         "interested": ["d1", "d2", "d3"],
         "funders": ["arne","linda","rigmor","wayne","garreth","carlos","joann","nieke"]
     }, {
@@ -55,7 +55,7 @@ module.exports = {
         "doctorsNeeded": 3,
         "description": "#big project \nThis is the long text to show, formated as markdown?",
         "status": "planned",
-        "contract": "0x0D04b0F323eEe5968573ab958fAb0295Ec44343a",
+        "contract": "0xbd37A601265d90EC90b9b233991488B90A39a2eb",
         "interested": ["d1", "d2", "d3"],
         "funders": ["arne","linda","rigmor","wayne","garreth","carlos","joann","nieke"]
     }

@@ -20,27 +20,24 @@
       </div>
     </nav>
   </div>
-</div>
 
-<div class="container">
-  <div class="row banner imgWithText">
-    <img src="../photos/avel-chuklanov-38687-unsplash.jpg">
-    <div class="top-left">Help us help others</div>
-    <div class="bottom-left">82% Something</div>
-  </div>
-</div>
 
-<div class="container">
-  <div class="row header">
-    <h3>CURRENT PROJECTS</h3>
-  </div>
-</div>
-
-<div class="container">
   <div class="row">
-      <div ng-repeat="project in projects" class="project imgWithText">
-        <img ng-src="{{project.img}}"/>
-        <div class="projTitle">{{project.title}}</div>
+    <div class="banner imgWithText">
+      <img class="col" ng-src="{{projects[0].bigimg}}"/>
+      <div class="top-left">Help us help others</div>
+      <div class="bottom-left">82% Something</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col"><h3 class="header">CURRENT PROJECTS</h3></div>
+  </div>
+
+  <div class="row">
+      <div ng-repeat="project in projects" class="project">
+        <img class="col projImg" ng-src="{{project.img}}"/>
+        <div class="col projTitle">{{project.title}}</div>
       </div>
     </div>
 </div>

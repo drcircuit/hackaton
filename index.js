@@ -21,14 +21,16 @@ const Web3 = require("web3");
 const web3 = new Web3(new Web3.providers.HttpProvider("http://" + ip + ":8545"));
 web3.eth.getBalance("0x8814894d7b0b4269b4f082a265fdddb841b4f265")
     .then(console.log)
-const contract = require("./repositories/contract.js")(web3, "0x8814894d7b0b4269b4f082a265fdddb841b4f265")
-contract.createContract("0xd8761dB6E003DeD028B08FCEd4575C184197cCfA", "1000", "60", "60")
+const contracts = require("./repositories/contract.js")(web3, "0x8814894d7b0b4269b4f082a265fdddb841b4f265")
+/*contracts.createContract("0xd8761dB6E003DeD028B08FCEd4575C184197cCfA", "1000", "60", "60")
     .then(adr => {
         console.log("Created contract addr", adr)
-    })
+    })*/
+contracts.getStatus("0x61400340b0F89C112CAE72e5F7B14C4090A7f48c")
+
 // Connect to mongoDb and do the inital set-up of adding dummy data to fill the database
 console.log("connecting to mongodb://"+ip+":27017")
-const db = require("./repositories/db.js")("mongodb://"+ip+":27017")
+const db = require("./repositories/db.js")("mongodb://"+ip+":27017", contracts)
 db.init()
 
 // Register all the routes we want to use

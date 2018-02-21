@@ -14,7 +14,7 @@ module.exports = {
         "due_date": "2134123412342",
         "status": "planned",
         "description": "This is the long text to show, formated as markdown?",
-        "contract": "emptycontract",
+        "contract": "0xef3d376a21BEAceeE001f885339f70bc0F39a51b",
         "interested": ["d1", "d2", "d3"]
     }, {
         "_id": "projid1",
@@ -31,7 +31,7 @@ module.exports = {
         "due_date": "2134123412342",
         "description": "This is the long text to show, formated as markdown?",
         "status": "planned",
-        "contract": "emptycontract2",
+        "contract": "0x61400340b0F89C112CAE72e5F7B14C4090A7f48c",
         "interested": ["d1", "d2", "d3"]
     }
     ],

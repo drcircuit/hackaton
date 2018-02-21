@@ -13,6 +13,9 @@ module.exports = (web3, public, pass) => {
     let source = fs.readFileSync('./contract/contract.sol', 'utf8');
     let compiledContract = solc.compile(source, 1);
     let abi = JSON.parse(compiledContract.contracts[':Project'].interface);
+    console.log()
+    console.log(JSON.stringify(abi))
+    console.log()
     let bin = compiledContract.contracts[':Project'].bytecode;
 
     console.log("contract has been compiled")
@@ -74,6 +77,13 @@ module.exports = (web3, public, pass) => {
         // Transfer from our account into the desired one
         transfer: (amount, to) => {
             
+        },
+        // Get the current status of the contract and return it
+        getStatus: (adr) => {
+            let contract = new web3.eth.Contract(abi, adr, createSet);
+            console.log("contract", contract)
+            contract.methods.recOrg().call(createSet)
+                .then(a => {console.log("rec", recOrg)})
         }
     }
 }

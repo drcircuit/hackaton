@@ -1,7 +1,7 @@
 const data = require("./initialdata.js")
 const mongodb = require("mongodb")
 
-module.exports = (uri) => {
+module.exports = (uri, contracts) => {
     let client;
     let mongo = require("mongodb").MongoClient;
 

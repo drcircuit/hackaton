@@ -40,7 +40,9 @@ img {
 /*-------HEADER-------*/
 
 /*-------PROJECT-------*/
-
+.project {
+  margin: 2vh;
+}
 .projTitle {
   position: absolute;
   bottom: 8px;

@@ -37,7 +37,7 @@ module.exports = {
         "interested": ["d1", "d2", "d3"],
         "funders": ["arne","linda","rigmor","wayne","garreth","carlos","joann","nieke"]
     }, {
-        "_id": "projid1",
+        "_id": "projid42",
         "created": "12d341235124334",
         "title": "African Outbreak",
         "short_description": "This is a short intro text that can be seen on the landing page",
@@ -56,7 +56,7 @@ module.exports = {
         "interested": ["d1", "d2", "d3"],
         "funders": ["arne","linda","rigmor","wayne","garreth","carlos","joann","nieke"]
     }, {
-        "_id": "projid1",
+        "_id": "projid69",
         "created": "12d341235124334",
         "title": "African Outbreak",
         "short_description": "This is a short intro text that can be seen on the landing page",

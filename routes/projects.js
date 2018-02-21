@@ -12,7 +12,18 @@ module.exports = (db, contracts) => {
     function fillProject(p) {
         let adr = p.contract;
         console.log("adr", adr, p)
-        return contracts.getStatus(adr)
+        return contracts.getStatus(adr).then(r => {
+
+
+            p.funded = r.raised
+            p.requested = r.goal
+            p.due_date = r.deadline
+            p.due_date_collect = r.reclaimDeadline
+
+            // TODO: Implement status
+
+            return p
+        })
     }
 
 
@@ -27,7 +38,10 @@ module.exports = (db, contracts) => {
                 delete it.description
                 return fillProject(it)
             })
-            r.then(res.json)
+            Promise.all(r).then(a => {
+                console.log("aaa", a)
+                res.json(a)
+            })
         })
     });
 

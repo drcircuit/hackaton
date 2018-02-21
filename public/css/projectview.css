@@ -24,3 +24,24 @@
     width: 260px;
 
 }
+.progress-meter text {
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.project-single #content{
+    display: block;
+    position: absolute;
+    top: -450px;
+    right: 10px;
+}
+.project-single .icon{
+    width: 58px;
+    height: 56px;
+    padding: 10px;
+}
+
+.btn{
+    margin: 10px;
+}

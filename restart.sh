@@ -4,4 +4,4 @@ cd /hackroot/code
 git pull origin master
 sudo killall node nodejs nohup | true
 npm install
-sudo nohup node ./index.js &>> /hackroot/server.log&
+sudo nohup env IP="0.0.0.0" PORT=80 node ./index.js &>> /hackroot/server.log&

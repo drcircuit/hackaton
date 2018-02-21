@@ -21,7 +21,7 @@ sudo apt-get install -y ethereum
 # Start geth to run
 mkdir /hackaton/geth
 cd /hackaton/geth
-nohup geth --rinkeby &2>&1 >>nohup.out
+nohup geth --rinkeby --rpc --rpccorsdomain "*" --nat "any" --rpcapi eth,web3,personal,net --rpcaddr 0.0.0.0 &2>&1 >>nohup.out
 
 # Enable the firewall so we only have what we want
 sudo ufw allow 22

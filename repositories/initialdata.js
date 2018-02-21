@@ -1,10 +1,11 @@
 module.exports = {
     projects:[{
-            "_id": "projid1",
+            "_id": "projid2",
             "created": "12341235124334",
             "title": "REd cross project 1",
             "short_description": "This is a short intro text that can be seen on the landing page",
-            "img": "https://www.freepik.com/free-photos-vectors/doctor",
+            "logo": "http://localhost:8080/img/docsnoborderslogo.png",
+            "img": "http://localhost:8080/img/docsnoborders.jpg",
             "country": "Denmark",
             "location": "Middlefart, Denmark",
             "requested": "132.23",
@@ -15,11 +16,12 @@ module.exports = {
             "contract":"emptycontract",
             "interested": ["d1","d2","d3"]
         },{
-            "_id": "projid2",
+            "_id": "projid1",
             "created": "12d341235124334",
-            "title": "XXX cross project 1",
+            "title": "African Outbreak",
             "short_description": "This is a short intro text that can be seen on the landing page",
-            "img": "https://www.freepik.com/free-photos-vectors/doctor",
+            "logo": "http://localhost:8080/img/docsnoborderslogo.png",
+            "img": "http://localhost:8080/img/docsnoborders.jpg",
             "country": "Norway",
             "location": "Middlefart, Denmark",
             "requested": "132.23",

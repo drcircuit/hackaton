@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-cd /hackroot
+cd /hackroot/code
 git pull origin master
 killall node nodejs
 node ./index.js

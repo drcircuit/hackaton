@@ -1,1 +1,30 @@
+#!/bin/bash
 # Just so we remember if something crashes
+
+# Update package manager
+sudo apt-get update
+
+# Install node to use
+curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Create a root folder we will host from
+sudo mkdir /hackaton
+sudo chown ubunut /hackaton
+
+# Install geth (a managed one)
+sudo apt-get install software-properties-common
+sudo add-apt-repository -y ppa:ethereum/ethereum
+sudo apt-get update
+sudo apt-get install -y ethereum
+
+# Start geth to run
+mkdir /hackaton/geth
+cd /hackaton/geth
+nohup geth --rinkeby &2>&1 >>nohup.out
+
+# Enable the firewall so we only have what we want
+sudo ufw allow 22
+sudo ufw enable
+sudo ufw allow 30303  
+sudo ufw allow 8545 # To be disabled later

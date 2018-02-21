@@ -6,10 +6,10 @@ const mongoDb = require("mongodb")
 module.exports = (db, contracts) => {
     const express = require("express");
     const router = express.Router();
-    
+
     // Function to take a db project object and use the web3 contracts interface
     // to fill with more information to use
-    }
+
 
 
     // Return general info about all the projects
@@ -23,7 +23,7 @@ module.exports = (db, contracts) => {
             })
 
         })
-    });
+    })
 
     // Return detailed info about a particular project
     router.get("/:id", (req, res) => {
@@ -37,6 +37,7 @@ module.exports = (db, contracts) => {
             }
         })
 
-    });
+    })
     return router
+
 }

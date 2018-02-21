@@ -38,6 +38,6 @@ db.init()
 
 // Register all the routes we want to use
 app.use("/api/projects", require("./routes/projects.js")(db, contracts));
-app.use("/api/doctors", require("./routes/doctors")(db, contracts));
+app.use("/api/doctors", require("./routes/doctors.js")(db, contracts));
 
 app.listen(port, () => console.log('Server listening on port ' +port +' !'))

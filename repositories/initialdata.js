@@ -1,4 +1,5 @@
 module.exports = {
+<<<<<<< HEAD
   projects: [
     {
       _id: 'projid2',
@@ -122,6 +123,67 @@ module.exports = {
         'joann',
         'nieke'
       ]
+=======
+    projects: [{
+        "_id": "projid2",
+        "title": "REd cross project 1",
+        "short_description": "This is a short intro text that can be seen on the landing page",
+        "logo": "http://localhost:8080/img/docsnoborderslogo.png",
+        "img": "http://localhost:8080/img/docsnoborders.jpg",
+        "bigimg": "http://localhost:8080/img/docsnobordersbig.jpg",
+        "country": "Denmark",
+        "location": "Middlefart, Denmark",
+        "status": "planned",
+        "description": "#big project \nThis is the long text to show, formated as markdown?",
+        "contract": "0xbd37A601265d90EC90b9b233991488B90A39a2eb",
+        "interested": ["d1", "d2", "d3"],
+        "funders": ["arne","linda","rigmor","wayne","garreth","carlos","joann","nieke"]
+    }, {
+        "_id": "projid1",
+        "title": "African Outbreak",
+        "short_description": "This is a short intro text that can be seen on the landing page",
+        "logo": "http://localhost:8080/img/docsnoborderslogo.png",
+        "img": "http://localhost:8080/img/docsnoborders.jpg",
+        "bigimg": "http://localhost:8080/img/docsnobordersbig.jpg",
+        "country": "Norway",
+        "location": "Middlefart, Denmark",
+        "doctorsNeeded": 3,
+        "description": "#big project \nThis is the long text to show, formated as markdown?",
+        "status": "planned",
+        "contract": "0xbd37A601265d90EC90b9b233991488B90A39a2eb",
+        "interested": ["d1", "d2", "d3"],
+        "funders": ["arne","linda","rigmor","wayne","garreth","carlos","joann","nieke"]
+    }, {
+        "_id": "projid42",
+        "title": "African Outbreak",
+        "short_description": "This is a short intro text that can be seen on the landing page",
+        "logo": "http://localhost:8080/img/docsnoborderslogo.png",
+        "img": "http://localhost:8080/img/docsnoborders.jpg",
+        "bigimg": "http://localhost:8080/img/docsnobordersbig.jpg",
+        "country": "Norway",
+        "location": "Middlefart, Denmark",
+        "doctorsNeeded": 3,
+        "description": "#big project \nThis is the long text to show, formated as markdown?",
+        "status": "planned",
+        "contract": "0xbd37A601265d90EC90b9b233991488B90A39a2eb",
+        "interested": ["d1", "d2", "d3"],
+        "funders": ["arne","linda","rigmor","wayne","garreth","carlos","joann","nieke"]
+    }, {
+        "_id": "projid69",
+        "title": "African Outbreak",
+        "short_description": "This is a short intro text that can be seen on the landing page",
+        "logo": "http://localhost:8080/img/docsnoborderslogo.png",
+        "img": "http://localhost:8080/img/docsnoborders.jpg",
+        "bigimg": "http://localhost:8080/img/docsnobordersbig.jpg",
+        "country": "Norway",
+        "location": "Middlefart, Denmark",
+        "doctorsNeeded": 3,
+        "description": "#big project \nThis is the long text to show, formated as markdown?",
+        "status": "planned",
+        "contract": "0xbd37A601265d90EC90b9b233991488B90A39a2eb",
+        "interested": ["d1", "d2", "d3"],
+        "funders": ["arne","linda","rigmor","wayne","garreth","carlos","joann","nieke"]
+>>>>>>> 5a0e7f7d66c0eb6bce957cacfc39876b9a9cfb7c
     }
   ],
   doctors: [

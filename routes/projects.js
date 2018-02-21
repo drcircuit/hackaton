@@ -13,15 +13,13 @@ module.exports = (db, contracts) => {
         let adr = p.contract;
         console.log("adr", adr, p)
         return contracts.getStatus(adr).then(r => {
-
-
             p.funded = r.raised
             p.requested = r.goal
             p.due_date = r.deadline
             p.due_date_collect = r.reclaimDeadline
+            p.created = r.created
 
             // TODO: Implement status
-
             return p
         })
     }
@@ -53,10 +51,12 @@ module.exports = (db, contracts) => {
                 res.status(404);
                 res.send({error: "No such project"});
             } else {
-                res.json(r)
+                fillProject(r)
+                    .then(a => {
+                        res.json(a)
+                    })
             }
         })
-
     });
 
     // Create an id mapping for using with the contract creation
@@ -69,7 +69,6 @@ module.exports = (db, contracts) => {
             } else {
                 // Create a "random" (this is not very safe) id that you can use for funding
                 let mr = "a" + rand(1e14)
-                console.log(r)
                 db.createFundMap(pid, mr).then(ra => {
                     res.json({"contract": r.contract,"tempid": mr})
                 })

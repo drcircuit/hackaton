@@ -154,6 +154,9 @@
             $scope.projects = res.data.reduce(function(rows, key, index) {
               key.index = index;
               key.percent = Number(key.funded) / Number(key.requested);
+              if (key.percent > 1.0) {
+                key.percent = 1.0;
+              }
               return (
                 (index % colsPerRow === 0
                   ? rows.push([key])
@@ -166,13 +169,6 @@
             $scope.error = err;
             console.log(err);
           });
-        $scope.makeCircled = function(c) {
-          createProgress(
-            Number(c.requested) / Number(c.funded),
-            'id' + c.index,
-            50
-          );
-        };
       }
     ])
     .controller('projectController', [

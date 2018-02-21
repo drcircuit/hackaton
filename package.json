@@ -29,6 +29,7 @@
     "bignumber.js": "^6.0.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "identicon.js": "^2.3.1",
     "mongodb": "^3.0.2",
     "random-seed": "^0.3.0",
     "request-json": "^0.6.2",

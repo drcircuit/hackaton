@@ -21,6 +21,12 @@ module.exports = (uri, contracts) => {
         init: (bankId) => {
             return connectDb()
                 .then(db => {
+                        // Start by dropping all the collections so we always start from something well
+                        // defined.
+                        db.collection("projects").drop()
+                        db.collection("doctors").drop()
+                        db.collection("funders").drop()
+
                         let all = []
                         // Fill with the projects
                         let col = db.collection("projects")
@@ -66,7 +72,13 @@ module.exports = (uri, contracts) => {
                     })
                 })
         },
-    getdoctors: (id) => {
+    getdoctors: () => {
+            return connectDb()
+                .then(db => {
+                    return db.collection("doctors").find();
+            });
+    },
+    getdoctor: (id) => {
             return connectDb()
                 .then(db => {
                     return db.collection("doctors").findOne({"_id": id});

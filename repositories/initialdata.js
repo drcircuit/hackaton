@@ -3,78 +3,63 @@ module.exports = {
     {
       _id: 'projid2',
       created: '12341235124334',
-      title: 'Sexual violence',
+      title: 'REd cross project 1',
       short_description:
         'This is a short intro text that can be seen on the landing page',
       logo: 'http://localhost:8080/img/docsnoborderslogo.png',
       img: 'http://localhost:8080/img/docsnoborders.jpg',
+      bigimg: 'http://localhost:8080/img/docsnobordersbig.jpg',
       country: 'Denmark',
       location: 'Middlefart, Denmark',
       requested: '132.23',
       funded: '100.1',
       due_date: '2134123412342',
       status: 'planned',
-      description: 'This is the long text to show, formated as markdown?',
-      contract: 'emptycontract',
-      interested: ['d1', 'd2', 'd3']
+      description:
+        '#big project \nThis is the long text to show, formated as markdown?',
+      contract: '0xef3d376a21BEAceeE001f885339f70bc0F39a51b',
+      interested: ['d1', 'd2', 'd3'],
+      funders: [
+        'arne',
+        'linda',
+        'rigmor',
+        'wayne',
+        'garreth',
+        'carlos',
+        'joann',
+        'nieke'
+      ]
     },
     {
       _id: 'projid1',
       created: '12d341235124334',
-      title: 'Acute malnutrition',
+      title: 'African Outbreak',
       short_description:
         'This is a short intro text that can be seen on the landing page',
       logo: 'http://localhost:8080/img/docsnoborderslogo.png',
       img: 'http://localhost:8080/img/docsnoborders.jpg',
+      bigimg: 'http://localhost:8080/img/docsnobordersbig.jpg',
       country: 'Norway',
       location: 'Middlefart, Denmark',
       requested: '132.23',
       funded: '100.1',
+      doctorsNeeded: 3,
       due_date: '2134123412342',
-      description: 'This is the long text to show, formated as markdown?',
+      description:
+        '#big project \nThis is the long text to show, formated as markdown?',
       status: 'planned',
-      contract: 'emptycontract2',
-      interested: ['d1', 'd2', 'd3']
-    },
-    {
-      _id: 'projid3',
-      created: '12341235124334',
-<<<<<<< Updated upstream
-      title: 'REd Einar vaccinations',
-=======
-      title: 'Red Einar vaccinations',
->>>>>>> Stashed changes
-      short_description:
-        'This is a short intro text that can be seen on the landing page',
-      logo: 'http://localhost:8080/img/docsnoborderslogo.png',
-      img: 'http://localhost:8080/img/docsnoborders.jpg',
-      country: 'Denmark',
-      location: 'Middlefart, Denmark',
-      requested: '132.23',
-      funded: '100.1',
-      due_date: '2134123412342',
-      status: 'planned',
-      description: 'This is the long text to show, formated as markdown?',
-      contract: 'emptycontract',
-      interested: ['d1', 'd2', 'd3']
-    },
-    {
-      _id: 'projid4',
-      created: '12341235124334',
-      title: 'Epidemics in NewTechLab',
-      short_description:
-        'This is a short intro text that can be seen on the landing page',
-      logo: 'http://localhost:8080/img/docsnoborderslogo.png',
-      img: 'http://localhost:8080/img/docsnoborders.jpg',
-      country: 'Denmark',
-      location: 'Middlefart, Denmark',
-      requested: '132.23',
-      funded: '100.1',
-      due_date: '2134123412342',
-      status: 'planned',
-      description: 'This is the long text to show, formated as markdown?',
-      contract: 'emptycontract',
-      interested: ['d1', 'd2', 'd3']
+      contract: '0x61400340b0F89C112CAE72e5F7B14C4090A7f48c',
+      interested: ['d1', 'd2', 'd3'],
+      funders: [
+        'arne',
+        'linda',
+        'rigmor',
+        'wayne',
+        'garreth',
+        'carlos',
+        'joann',
+        'nieke'
+      ]
     }
   ],
   doctors: [

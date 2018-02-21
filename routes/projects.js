@@ -3,13 +3,19 @@ let rand = gen.create()
 const mongoDb = require("mongodb")
 
 
-module.exports = (db) => {
+module.exports = (db, contracts) => {
     const express = require("express");
     const router = express.Router();
     
+    // Function to take a db project object and use the web3 contracts interface
+    // to fill with more information to use
+    
+
+
     // Return general info about all the projects
     router.get("/", (req, res) => {
         db.listprojects().then(r => {
+            // Map over some fields
             r = r.map(it => {
                 it.id = it._id
                 delete it._id
@@ -17,6 +23,7 @@ module.exports = (db) => {
                 delete it.description
                 return it
             })
+            // We also need to read out the data 
             res.json(r)
         })
     });

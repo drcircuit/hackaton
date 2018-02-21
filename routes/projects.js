@@ -13,15 +13,12 @@ module.exports = (db, contracts) => {
         let adr = p.contract;
         console.log("adr", adr, p)
         return contracts.getStatus(adr).then(r => {
-
-
             p.funded = r.raised
             p.requested = r.goal
             p.due_date = r.deadline
             p.due_date_collect = r.reclaimDeadline
 
             // TODO: Implement status
-
             return p
         })
     }
@@ -53,7 +50,10 @@ module.exports = (db, contracts) => {
                 res.status(404);
                 res.send({error: "No such project"});
             } else {
-                res.json(r)
+                fillProject(r)
+                    .then(a => {
+                        res.json(a)
+                    })
             }
         })
 

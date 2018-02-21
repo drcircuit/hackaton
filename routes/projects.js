@@ -17,6 +17,7 @@ module.exports = (db, contracts) => {
             p.requested = r.goal
             p.due_date = r.deadline
             p.due_date_collect = r.reclaimDeadline
+            p.created = r.created
 
             // TODO: Implement status
             return p

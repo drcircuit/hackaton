@@ -13,12 +13,10 @@ module.exports = (web3, public, pass) => {
     let source = fs.readFileSync('./contract/contract.sol', 'utf8');
     let compiledContract = solc.compile(source, 1);
     let abi = JSON.parse(compiledContract.contracts[':Project'].interface);
-    console.log()
-    console.log(JSON.stringify(abi))
-    console.log()
     let bin = compiledContract.contracts[':Project'].bytecode;
 
     console.log("contract has been compiled")
+    console.log(JSON.stringify(abi))
 
     // Get the contract, note that this will take a long time to time
     // out if the contract does not exist...
@@ -86,7 +84,8 @@ module.exports = (web3, public, pass) => {
                 contract.methods.goal().call(createSet),
                 contract.methods.raised().call(createSet),
                 contract.methods.deadline().call(createSet),
-                contract.methods.reclaimDeadline().call(createSet)
+                contract.methods.reclaimDeadline().call(createSet),
+                contract.methods.created().call(createSet)
             ]
             return Promise.all(arr)
                 .then(a => {
@@ -96,6 +95,7 @@ module.exports = (web3, public, pass) => {
                         raised: a[2],
                         deadline: a[3],
                         reclaimDeadline: a[4],
+                        created: a[5],
                     }
                 })
         }

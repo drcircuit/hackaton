@@ -1,7 +1,6 @@
 module.exports = {
     projects: [{
         "_id": "projid2",
-        "created": "12341235124334",
         "title": "REd cross project 1",
         "short_description": "This is a short intro text that can be seen on the landing page",
         "logo": "http://localhost:8080/img/docsnoborderslogo.png",
@@ -11,12 +10,11 @@ module.exports = {
         "location": "Middlefart, Denmark",
         "status": "planned",
         "description": "#big project \nThis is the long text to show, formated as markdown?",
-        "contract": "0xef3d376a21BEAceeE001f885339f70bc0F39a51b",
+        "contract": "0x0D04b0F323eEe5968573ab958fAb0295Ec44343a",
         "interested": ["d1", "d2", "d3"],
         "funders": ["arne","linda","rigmor","wayne","garreth","carlos","joann","nieke"]
     }, {
         "_id": "projid1",
-        "created": "12d341235124334",
         "title": "African Outbreak",
         "short_description": "This is a short intro text that can be seen on the landing page",
         "logo": "http://localhost:8080/img/docsnoborderslogo.png",
@@ -27,12 +25,11 @@ module.exports = {
         "doctorsNeeded": 3,
         "description": "#big project \nThis is the long text to show, formated as markdown?",
         "status": "planned",
-        "contract": "0x61400340b0F89C112CAE72e5F7B14C4090A7f48c",
+        "contract": "0x0D04b0F323eEe5968573ab958fAb0295Ec44343a",
         "interested": ["d1", "d2", "d3"],
         "funders": ["arne","linda","rigmor","wayne","garreth","carlos","joann","nieke"]
     }, {
         "_id": "projid42",
-        "created": "12d341235124334",
         "title": "African Outbreak",
         "short_description": "This is a short intro text that can be seen on the landing page",
         "logo": "http://localhost:8080/img/docsnoborderslogo.png",
@@ -43,12 +40,11 @@ module.exports = {
         "doctorsNeeded": 3,
         "description": "#big project \nThis is the long text to show, formated as markdown?",
         "status": "planned",
-        "contract": "0x61400340b0F89C112CAE72e5F7B14C4090A7f48c",
+        "contract": "0x0D04b0F323eEe5968573ab958fAb0295Ec44343a",
         "interested": ["d1", "d2", "d3"],
         "funders": ["arne","linda","rigmor","wayne","garreth","carlos","joann","nieke"]
     }, {
         "_id": "projid69",
-        "created": "12d341235124334",
         "title": "African Outbreak",
         "short_description": "This is a short intro text that can be seen on the landing page",
         "logo": "http://localhost:8080/img/docsnoborderslogo.png",
@@ -59,7 +55,7 @@ module.exports = {
         "doctorsNeeded": 3,
         "description": "#big project \nThis is the long text to show, formated as markdown?",
         "status": "planned",
-        "contract": "0x61400340b0F89C112CAE72e5F7B14C4090A7f48c",
+        "contract": "0x0D04b0F323eEe5968573ab958fAb0295Ec44343a",
         "interested": ["d1", "d2", "d3"],
         "funders": ["arne","linda","rigmor","wayne","garreth","carlos","joann","nieke"]
     }

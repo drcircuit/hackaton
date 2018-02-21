@@ -1,9 +1,5 @@
 pragma solidity ^0.4.16;
 
-interface token {
-    function transfer(address receiver, uint amount);
-}
-
 contract Project {
     // The organisation that should be recieving the money from this contract
     address public recOrg;
@@ -15,6 +11,8 @@ contract Project {
     uint public deadline;
     // Latest time when a user can re-claim there money before the org can claim it regardless
     uint public reclaimDeadline;
+    // When this project was created
+    uint public created;
 
     // Keep track of how much each sender has sent in
     mapping(address => uint256) public balance;
@@ -34,13 +32,14 @@ contract Project {
         address recOrg_,    // Address of the receiving organisation
         uint goal_,         // Funding goal in wei
         uint duration_,     // Duration in minutes the campaign should be active
-        uint reclaimPeriod_ // Period during which money can be claimed back
-    ) {
+        uint reclaimPeriod_) public 
+    {
         recOrg = recOrg_;
         goal = goal_ * 1 wei;
         raised = 0;
         deadline = now + duration_ * 1 minutes;
         reclaimDeadline = deadline + reclaimPeriod_ * 1 minutes;
+        created = now;
     }
 
     // Function to fund this project
@@ -93,7 +92,9 @@ contract Project {
                 } else {
                     // After the reclaim deadline so we should only send to the org
                     if (recOrg == msg.sender) {
-                        recOrg.send(raised);
+                        if (recOrg.send(raised)) {
+
+                        }
                     }
                 }
             }

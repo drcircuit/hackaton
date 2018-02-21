@@ -11,6 +11,7 @@ module.exports = (db, contracts) => {
     // to fill with more information to use
     function fillProject(p) {
         let adr = p.contract;
+        console.log("adr", adr, p)
         return contracts.getStatus(adr)
     }
 

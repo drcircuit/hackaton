@@ -66,7 +66,13 @@ module.exports = (uri, contracts) => {
                     })
                 })
         },
-    getdoctors: (id) => {
+    getdoctors: () => {
+            return connectDb()
+                .then(db => {
+                    return db.collection("doctors").find();
+            });
+    },
+    getdoctor: (id) => {
             return connectDb()
                 .then(db => {
                     return db.collection("doctors").findOne({"_id": id});

@@ -24,9 +24,11 @@ web3.eth.getBalance("0x889fA5dBf2052ff8244D0B9c092Ee50A4917c559")
     .catch(console.error)
 
 // Connect to mongoDb and do the inital set-up of adding dummy data to fill the database
-const db = require("./repositories/db.js")(ip)
+console.log("connecting to mongodb://"+ip+":27017")
+const db = require("./repositories/db.js")("mongodb://"+ip+":27017")
+db.init()
 
 // Register all the routes we want to use
-app.use("/api/projects", require("./routes/projects.js")());
+app.use("/api/projects", require("./routes/projects.js")(db));
 
 app.listen(port, () => console.log('Server listening on port ' +port +' !'))

@@ -1,35 +1,53 @@
+const data = require("./initialdata.js")
+
 module.exports = (uri) => {
     let client;
     let mongo = require("mongodb").MongoClient;
 
     function connectDb() {
         return mongo.connect(uri).then((c) => {
-            const db = c.db("ethnics");
-            let col = db.collection("accounts");
-            return new Promise((resolve) => {
-                client = c;
-                resolve(col);
-            });
+            return new Promise(r => {
+                r(c.db("hackaton"))
+            })
         });
     }
 
-    function clean() {
-        if (client) {
-            client.close();
-        }
-    }
+    connectDb().then(() => {
+        console.log("conntected to db")
+    })
 
     return {
-
-        allAccounts: (bankId) => {
+        init: (bankId) => {
             return connectDb()
-                .then((col) => {
-                        return col.find({"bankAddress": bankId});
+                .then(db => {
+                        let all = []
+                        // Fill with the projects
+                        let col = db.collection("projects")
+                        data.projects.map((d,i) => {
+                            console.log("creating project " + i)
+                            all.push(col.update({_id: d._id}, d, {upsert: true}))
+                        })
+                        // Fill with doctors
+                        col = db.collection("doctors")
+                        data.doctors.map((d,i) => {
+                            console.log("creating doctor " + i)
+                            all.push(col.update({_id: d._id}, d, {upsert: true}))
+                        })
+                        // Fill with funders
+                        col = db.collection("funders")
+                        data.doctors.map((d,i) => {
+                            console.log("creating funder " + i)
+                            all.push(col.update({_id: d._id}, d, {upsert: true}))
+                        })
+                        return Promise.all(all)
                     }
                 )
-                .then((res) => {
-                    return res.toArray();
-                });
         },
+        listprojects: () => {
+            return connectDb()
+                .then(db => {
+                    return db.collection("projects").find().toArray()
+                })
+        }
     }
 }

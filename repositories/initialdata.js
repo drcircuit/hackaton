@@ -13,9 +13,10 @@ module.exports = {
         "funded": "100.1",
         "due_date": "2134123412342",
         "status": "planned",
-        "description": "This is the long text to show, formated as markdown?",
+        "description": "#big project \nThis is the long text to show, formated as markdown?",
         "contract": "emptycontract",
-        "interested": ["d1", "d2", "d3"]
+        "interested": ["d1", "d2", "d3"],
+        "funders": ["arne","linda","rigmor","wayne","garreth","carlos","joann","nieke"]
     }, {
         "_id": "projid1",
         "created": "12d341235124334",
@@ -28,11 +29,13 @@ module.exports = {
         "location": "Middlefart, Denmark",
         "requested": "132.23",
         "funded": "100.1",
+        "doctorsNeeded": 3,
         "due_date": "2134123412342",
-        "description": "This is the long text to show, formated as markdown?",
+        "description": "#big project \nThis is the long text to show, formated as markdown?",
         "status": "planned",
         "contract": "emptycontract2",
-        "interested": ["d1", "d2", "d3"]
+        "interested": ["d1", "d2", "d3"],
+        "funders": ["arne","linda","rigmor","wayne","garreth","carlos","joann","nieke"]
     }
     ],
     doctors: [

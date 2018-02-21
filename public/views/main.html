@@ -1,20 +1,20 @@
 <div class="container">
-  <div class="row navBar navbarNav">
-    <nav class="navbar navbar-expand-lg navbar-light col">
-      <img id="profileImg" src="./img/redcross.jpg"/>
-      <a class="navbar-brand navbarNav" href="#">News</a>
-      <a class="navbar-brand" href="#">Blog</a>
-      <a class="navbar-brand" href="#">Projects</a>
-      <img id="profileImg" src="./img/profile.jpeg"/>
+    <nav class="row navbar navbar-expand-lg navbar-light ">
+      <img class="col-1" id="profileImg" src="./img/redcross.jpg"/>
+      <a class="col-6 navbar-brand navbarNav"></a>
+      <a class="col-1 navbar-brand navbarNav" href="#">News</a>
+      <a class="col-1 navbar-brand" href="#">Blog</a>
+      <a class="col-1 navbar-brand" href="#">Projects</a>
+      <img class="col-1" id="profileImg" src="./img/profile.jpeg"/>
     </nav>
-  </div>
 
 
   <div class="row">
-    <div class="banner imgWithText">
-      <img class="col" ng-src="{{projects[0][0].bigimg}}"/>
-      <div class="top-left">Help us help others</div>
-      <div class="bottom-left">82% Something</div>
+    <div class="imgWithText">
+      <img class="col" src="./img/banner.png"/>
+      <div class="mainText">Help us help others</div>
+      <div id="sub1" class="subText">82% Something</div>
+      <div id="sub2" class="subText">15% thats right</div>
     </div>
   </div>
 
@@ -22,10 +22,10 @@
     <div class="col"><h3 class="header">CURRENT PROJECTS</h3></div>
   </div>
 
-  <div ng-repeat="row in projects" class="row">
-      <div ng-repeat="project in row" class="col-6">
-          <img class="projImg" ng-src="{{project.img}}"/>
+  <div ng-repeat="row in projects" class="row twoProj">
+      <div ng-style="{'background-image' :'url(' + project.img + ')', 'background-repeat':'no-repeat', 'background-size': 'cover','height': '249px', 'padding':'0px;'}" ng-repeat="project in row" class=" projImg col-6">
           <div class="projTitle">{{project.title}}</div>
+          <img id="fundingImg" src="./img/circle.png"/>
       </div>
     </div>
 

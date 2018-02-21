@@ -205,7 +205,7 @@ module.exports = {
             "languages": [{"name": "English", "code": "en"}],
             "bio": "Dr. George received a BS in engineering from Cornell University, where he graduated \"With Distinction.\" He also graduated from Cornell University Medical College. He completed his surgical internship at Brown University and his orthopedic surgery residency at the University of Vermont. Following his residency, he completed a spine surgery fellowship at Penn State University.\n\nDuring his career Dr. George has co-authored several original scientific studies. He has published articles in The New England Journal of Medicine, The Journal of Bone and Joint Surgery, and Spine, as well as other orthopedic journals.\n\nDr. George is board-certified by The American Board of Orthopedic Surgery. He specializes in adult spinal medicine and surgery. He has extensive experience in non-operative treatment of spinal disorders as well as expertise in complex surgical techniques for lumbar and cervical conditions."
         }, {
-            "id": "d13",
+            "id": "d14",
             "first_name": "John",
             "middle_name": "L",
             "last_name": "Pennings",
@@ -216,7 +216,7 @@ module.exports = {
             "languages": [{"name": "English", "code": "en"}],
             "bio": "Dr. Pennings graduated from the University of Minnesota and completed his surgical residency and advanced laparoscopic surgery fellowship in Portland, Oregon. He is the founder and director of Surgical Bariatrics Northwest. In nearly 15 years of clinical experience, Dr. Pennings has performed well over 2000 advanced laparoscopic gastrointestinal procedures. He is a Board Certified Fellow of the American College of Surgeons, a Fellow of the American Society of Metabolic and Bariatric Surgeons, an active member of the American Academy of Cosmetic Surgery, and the Society of Gastrointestinal and Endoscopic Surgeons. He is committed to surgical excellence and compassionate patient care"
         }, {
-            "id": "d14",
+            "id": "d15",
             "first_name": "John",
             "middle_name": "Harvey",
             "last_name": "Serocki",

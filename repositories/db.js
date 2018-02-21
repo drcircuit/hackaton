@@ -48,6 +48,12 @@ module.exports = (uri) => {
                 .then(db => {
                     return db.collection("projects").find().toArray()
                 })
+        },
+        getproject: (id) => {
+            return connectDb()
+                .then(db => {
+                    return db.collection("projects").findOne({"_id":id})
+                })
         }
     }
 }

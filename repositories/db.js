@@ -1,4 +1,5 @@
 const data = require("./initialdata.js")
+const mongodb = require("mongodb")
 
 module.exports = (uri) => {
     let client;
@@ -53,6 +54,16 @@ module.exports = (uri) => {
             return connectDb()
                 .then(db => {
                     return db.collection("projects").findOne({"_id":id})
+                })
+        },
+        createFundMap: (pid, no) => {
+            return connectDb()
+                .then(db => {
+                    return db.collection("fundmaps").insert({
+                        _id:new mongodb.ObjectID(),
+                        pid: pid,
+                        no: no,
+                    })
                 })
         }
     }

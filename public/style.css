@@ -1,0 +1,51 @@
+/*-------GENERAL-------*/
+
+body {
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans',
+    'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+}
+
+.imgWithText {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 80px;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/*-------NAVBAR-------*/
+
+#navbarNav {
+  position: relative;
+  float: right;
+}
+
+/*-------BANNER-------*/
+.banner,
+img {
+  height: 30vh;
+}
+
+/*-------HEADER-------*/
+
+/*-------PROJECT-------*/
+
+.projTitle {
+  position: absolute;
+  bottom: 8px;
+  background-color: black;
+  width: 497px;
+  opacity: 0.7;
+  font-size: 25px;
+}

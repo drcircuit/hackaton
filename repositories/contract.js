@@ -82,7 +82,8 @@ module.exports = (web3, public, pass) => {
         getStatus: (adr) => {
             let contract = new web3.eth.Contract(abi, adr, createSet);
             console.log("contract", contract)
-            contract.methods.recOrg().call(createSet)
+            console.log(adr, "adr")
+            contract.methods.goal().call(createSet)
                 .then(a => {console.log("rec", recOrg)})
         }
     }

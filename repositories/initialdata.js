@@ -11,6 +11,7 @@ module.exports = {
             "funded": "100.1",
             "due_date": "2134123412342",
             "status": "planned",
+            "description": "This is the long text to show, formated as markdown?",
             "interested": ["d1","d2","d3"]
         },{
             "_id": "projid2",
@@ -23,6 +24,7 @@ module.exports = {
             "requested": "132.23",
             "funded": "100.1",
             "due_date": "2134123412342",
+            "description": "This is the long text to show, formated as markdown?",
             "status": "planned",
             "interested": ["d1","d2","d3"]
             }

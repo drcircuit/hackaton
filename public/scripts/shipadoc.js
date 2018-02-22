@@ -167,6 +167,7 @@
                             );
                         }, []);
                         console.log($scope.projects);
+                        $scope.$digest();
                     })
                     .catch(function (err) {
                         $scope.error = err;

@@ -7,26 +7,28 @@
         </div>
         <img class="logo" src="{{project.logo}}" alt="">
         <div class="row iconsrow">
-            <div class="col-2 tititem">
+            <div class="micon">
                 <img class="icon" src="./img/doctorsicon.png" alt="">
                 <span>{{project.doctorsNeeded}} doctors</span>
             </div>
-            <div class="col-2">
+            <div class="micon">
                 <img class="icon" src="./img/fundersicon.png" alt="">
                 <span>{{project.funders.length}} funders</span>
             </div>
-            <div class="col-2">
+            <div class="micon">
                 <img class="icon" src="./img/fundingicon.png" alt="">
                 <span>{{project.requested}} ETH target</span>
             </div>
-            <div class="col-2">
+            <div class="micon">
                 <img class="icon" src="./img/fundingicon.png" alt="">
                 <span>{{project.raised}} ETH raised</span>
             </div>
-            <div class="col-2">
-                {{project.daysLeft}} days left
+        </div>
+        <div class="row iconsrow lrt">
+            <div class=" dleft">
+                Only {{project.daysLeft}} days left, please
             </div>
-            <div class="col-4">
+            <div class="mbtn">
                 <button type="button" class="btn btn-primary" ng-click="open()" data-toggle="modal"
                         data-target="#exampleModalLive">
                     CONTRIBUTE
@@ -35,10 +37,7 @@
         </div>
         <div class="row mainrow">
 
-            <div class="col-9 textcol">
-                <p ng-bind-html="project.description | to_trusted"></p>
-            </div>
-            <div class="col-3 doccol">
+            <div class="col-2 doccol">
                 <h4>Doctors</h4>
                 <div ng-repeat="doctor in doctors">
                     <a ng-click="showDoctor(doctor)">
@@ -46,6 +45,11 @@
                         <i>{{doctor.first_name}} {{doctor.last_name}} {{doctor.title}}</i>
                     </a>
                 </div>
+            </div>
+            <div class="col-8 textcol">
+                <p ng-bind-html="project.description | to_trusted"></p>
+            </div>
+            <div class="col-2"></div>
             </div>
         </div>
     </div>

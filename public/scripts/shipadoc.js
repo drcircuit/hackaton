@@ -98,7 +98,7 @@
 
     angular
         .module('shipadoc', ['ngRoute', "ui.bootstrap.modal"])
-        .value('apiUri', 'http://localhost:8080/api/')
+        .value('apiUri', '/api/')
         .directive('circle', function () {
             return {
                 link: function (scope, element, attrs) {
@@ -167,7 +167,7 @@
                             );
                         }, []);
                         console.log($scope.projects);
-                        $scope.$digest();
+                        $scope.$apply()
                     })
                     .catch(function (err) {
                         $scope.error = err;
@@ -191,7 +191,7 @@
                             $scope.doctors = stuff.map(function (d) {
                                 return d.data;
                             });
-                            $scope.$digest();
+                            $scope.$apply()
                             console.log($scope.doctors);
                         })
                         .catch(function (err) {
@@ -223,7 +223,9 @@
                                 createProgress($scope.progress, 'div#content', 50);
                                 previousProgress = $scope.progress;
                             }
+
                             loadDoctors($scope.project.interested);
+                            $scope.$apply()
                         })
                         .catch(function (err) {
                             console.log(err);

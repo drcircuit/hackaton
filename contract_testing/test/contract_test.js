@@ -3,8 +3,8 @@ contract('Project', function(accounts) {
   it("should assert true", function(done) {
     Project.deployed().then(function(instance){
     	console.log("Project.deployed()");
-    	var recOrg = instance.recOrg.call();
-    	recOrg.then(function(res){
+    	var result = instance.recOrg.call();
+    	result.then(function(res){
     		console.log("recOrg: " + res);
 
 	    	var goal = instance.goal.call();
@@ -27,41 +27,21 @@ contract('Project', function(accounts) {
 						      console.log("Found event: Funding");
 						      break;
 						    }
-						  }
-	    			})
-	    			.then(done);
+						}
+
+						var raised2 = instance.raised.call();
+				    	raised2.then(function(res){
+			    			console.log("raised2: " + res);
+
+			    		})
+						.then(done);
+					});
 	    		});
     		});
     	})
-    	// .then(done);
-    	return recOrg;
-
-    	// console.log("recOrg: " + recOrg);
-
+    	return result;
 
     })
     .catch (console.error)
-
-    // console.log("Contract deployed");
-
-    // contract.then(function(contract){
-    //     console.log("project function(contract)");
-    //     // result.then(console.log)
-    //     var result1 = contract.fund(100);
-    //     var result1 = contract.fund(200);
-    //     result1.then(console.log)
-    //     .then(function(result1){
-    //     	var result = contract.raised.call();
-    //     	console.log("Raised Value: ");
-    //     	result.then(console.log)
-    //     	.then(done);
-    //     })
-    //     //.then(() => console.log(contract.status()))
-    // 	//.then(() => contract.fund(901))
-    //     //.then(() => console.log(contract.status()))
-    // 	//.then(done);
-    // 	//return result;
-    // })
-    // .catch(console.error)
   });
 });

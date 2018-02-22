@@ -100,6 +100,9 @@ module.exports = (db, contracts) => {
                 return fillProject(it)
             })
             Promise.all(r).then(a => {
+                a.sort((b, c) => {
+                    b.due_date - c.due_date
+                })
                 res.json(a)
             })
         })

@@ -42,7 +42,7 @@ module.exports = (uri, contracts) => {
                         })
                         // Fill with funders
                         col = db.collection("funders")
-                        data.doctors.map((d,i) => {
+                        data.funders.map((d,i) => {
                             console.log("creating funder " + i)
                             all.push(col.update({_id: d._id}, d, {upsert: true}))
                         })
@@ -62,27 +62,40 @@ module.exports = (uri, contracts) => {
                     return db.collection("projects").findOne({"_id":id})
                 })
         },
-        createFundMap: (pid, no) => {
+        createFundMap: (pid, no, uid) => {
             return connectDb()
                 .then(db => {
                     return db.collection("fundmaps").insert({
                         _id:new mongodb.ObjectID(),
                         pid: pid,
                         no: no,
+                        uid: uid,
                     })
                 })
         },
-    getdoctors: () => {
+        findFundMap: (id) => {
             return connectDb()
                 .then(db => {
-                    return db.collection("doctors").find();
-            });
-    },
-    getdoctor: (id) => {
+                    return db.collection("fundmaps").findOne({no:id})
+                })
+        },
+        findFunder: (id) => {
             return connectDb()
                 .then(db => {
-                    return db.collection("doctors").findOne({"_id": id});
-            });
-    }
+                    return db.collection("funders").findOne({_id:id})
+                })
+        },
+        getdoctors: () => {
+                return connectDb()
+                    .then(db => {
+                        return db.collection("doctors").find();
+                });
+        },
+        getdoctor: (id) => {
+                return connectDb()
+                    .then(db => {
+                        return db.collection("doctors").findOne({"_id": id});
+                });
+        }
     }
 }

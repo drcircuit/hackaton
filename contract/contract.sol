@@ -43,6 +43,7 @@ contract Project {
     }
 
     // Function to fund this project
+    // TODO: Make sure it cant be paid to after deadline?
     function fund(uint id) public payable {
         require(!reached);
         require(!closed);

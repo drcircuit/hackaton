@@ -5,7 +5,7 @@ const solc = require('solc')
 
 
 module.exports = (web3, public, pass) => {
-    const createSet = {from: public, gas: 500000, gasPrice: "50000000000"}
+    const createSet = {from: public, gas: 750000, gasPrice: "50000000000"}
     web3.eth.defaultAccount = public;
 
     // On first load we read in the solidity contract and complie it, do this sync. so we do not
@@ -37,6 +37,7 @@ module.exports = (web3, public, pass) => {
                 .then(v => {
                     if(!v) {
                         i++
+                        console.log("testing", i)
                         if(i>600) {
                             err("timeout from ntlbs code")
                             return
@@ -56,8 +57,11 @@ module.exports = (web3, public, pass) => {
                 arguments: args
             })
             .send(createSet)
-            .on('error', e => {})
+            .on('error', e => {
+                console.error("my error", e)
+            })
             .on('transactionHash', function(transactionHash){
+                console.log("th", transactionHash)
                 findC(transactionHash)
                 // kick of a loop where we keep waiting for the contract adr and
                 // then return that

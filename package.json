@@ -26,6 +26,7 @@
     "arg-parser": "^1.2.0",
     "args-parser": "^1.1.0",
     "aws-sdk": "^2.190.0",
+    "big-number": "^0.4.0",
     "bignumber.js": "^6.0.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",

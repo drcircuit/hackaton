@@ -10,7 +10,7 @@
     background: rgba(0,0,0,0.7);
     width: 100%;
     display: block;
-    padding: 10px;
+    padding: 10px 60px;
     text-align: right;
     width: 100%;
     color: white;
@@ -21,9 +21,8 @@
 
 .project-single .logo{
     position: absolute;
-    top: -60px;
-    width: 260px;
-    left: 14px;
+    width: 150px;
+    left: 5px;
 
 }
 .progress-meter text {
@@ -35,8 +34,8 @@
 .project-single #content{
     display: block;
     position: absolute;
-    top: -450px;
-    right: 10px;
+    top: -45px;
+    left: 1px;
 }
 .project-single .icon{
     width: 58px;
@@ -56,6 +55,7 @@
 }
 .doccol {
     text-align: left;
+    padding-left: 48px;
     /*overflow: hidden;*/
 }
 .doccol > *:first-child {
@@ -66,13 +66,13 @@ margin-left: 0.8em;
     margin-left: 1.2em;
 }
 
-.textcol {
+.projHeader{
  /*   padding-left: 5%;
     padding-right: 5%; */
 }
 
 .micon {
-    
+
 }
 
 .iconsrow {

@@ -5,7 +5,6 @@
             <h1>{{project.title}}</h1>
             <div id="content"></div>
         </div>
-        <img class="logo" src="{{project.logo}}" alt="">
         <div class="row iconsrow">
             <div class="micon">
                 <img class="icon" src="./img/doctorsicon.png" alt="">
@@ -49,6 +48,8 @@
             </div>
             <div class="col-6 textcol ek">
                 <p ng-bind-html="project.description | to_trusted"></p>
+                <img class="logo" src="{{project.logo}}" alt="">
+                
             </div>
             <div class="col-3 es"></div>
             </div>

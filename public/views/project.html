@@ -37,7 +37,7 @@
         </div>
         <div class="row mainrow">
 
-            <div class="col-2 doccol">
+            <div class="col-3 doccol">
                 <h4>Doctors</h4>
                 <div ng-repeat="doctor in doctors">
                     <a ng-click="showDoctor(doctor)">
@@ -46,10 +46,10 @@
                     </a>
                 </div>
             </div>
-            <div class="col-8 textcol">
+            <div class="col-6 textcol">
                 <p ng-bind-html="project.description | to_trusted"></p>
             </div>
-            <div class="col-2"></div>
+            <div class="col-3"></div>
             </div>
         </div>
     </div>

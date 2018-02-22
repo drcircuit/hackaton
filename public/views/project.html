@@ -23,10 +23,13 @@
                 <img class="icon" src="./img/fundingicon.png" alt="">
                 <span>{{project.raised}} ETH raised</span>
             </div>
+            <div class="col-2">
+                {{project.daysLeft}} days left
+            </div>
             <div class="col-4">
                 <button type="button" class="btn btn-primary" ng-click="open()" data-toggle="modal"
                         data-target="#exampleModalLive">
-                    Launch demo modal
+                    CONTRIBUTE
                 </button>
             </div>
         </div>
@@ -46,14 +49,15 @@
     <div class="modal-dialog" ng-show="showModal" close="cancel()">
         <div class="modal-content">
             <div class="modal-header">
-                <h4>Modal Dialog</h4>
+                <h4>Contribute to {{project.title}}</h4>
             </div>
             <div class="modal-body">
-                <p>Example paragraph with some text.</p>
+                <img src="{{funding.qr}}" alt="">
+                <p><strong>{{funding.contract}}</strong></p>
+                <p><strong>{{funding.tempid}}</strong></p>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-success" ng-click="ok()">Okay</button>
-                <button class="btn" ng-click="cancel()">Cancel</button>
+                <button class="btn btn-success" ng-click="ok()">CLOSE</button>
             </div>
         </div>
     </div>

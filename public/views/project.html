@@ -1,13 +1,13 @@
 <div class="jumbotron jumbotron-fluid"
      ng-style="{'background-image' :'url(' + project.bigimg + ')', 'height': '549px'}">
     <div class="project-single">
-        <div class="imgbox">
+        <div class="imgbox imgtop">
             <h1>{{project.title}}</h1>
             <div id="content"></div>
         </div>
         <img class="logo" src="{{project.logo}}" alt="">
-        <div class="row">
-            <div class="col-2">
+        <div class="row iconsrow">
+            <div class="col-2 tititem">
                 <img class="icon" src="./img/doctorsicon.png" alt="">
                 <span>{{project.doctorsNeeded}} doctors</span>
             </div>
@@ -33,12 +33,12 @@
                 </button>
             </div>
         </div>
-        <div class="row">
+        <div class="row mainrow">
 
-            <div class="col-9">
+            <div class="col-9 textcol">
                 <p ng-bind-html="project.description | to_trusted"></p>
             </div>
-            <div class="col-3">
+            <div class="col-3 doccol">
                 <h4>Interested doctors</h4>
                 <div ng-repeat="doctor in doctors">
                     <img class="doctor-profile-img img-circle"src="{{doctor.image_url}}" alt="">

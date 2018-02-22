@@ -28,16 +28,19 @@ contract('Project', function(accounts) {
 						      break;
 						    }
 						  }
-	    			});
+	    			})
+	    			.then(done);
 	    		});
     		});
     	})
-    	.then(done);
+    	// .then(done);
+    	return recOrg;
 
     	// console.log("recOrg: " + recOrg);
 
 
-    });
+    })
+    .catch (console.error)
 
     // console.log("Contract deployed");
 

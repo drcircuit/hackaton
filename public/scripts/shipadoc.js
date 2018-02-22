@@ -221,7 +221,7 @@
                         .catch(function (err) {
                             console.log(err);
                         });
-                    $timeout(load, 2000);
+                    //$timeout(load, 10000);
                 };
                 $scope.showDoctor = function(doctor){
                     console.log(doctor);

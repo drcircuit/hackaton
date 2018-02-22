@@ -9,14 +9,14 @@
         var color = colors.green;
 
         var radius = radius || 50;
-        var border = 5;
+        var border = 3;
         var padding = radius / 2;
         var startPercent = 0;
         var endPercent = progress;
 
         var twoPi = Math.PI * 2;
         var formatPercent = d3.format('.0%');
-        var boxSize = (radius + padding) * 2;
+        var boxSize = (radius + padding) * 2.2;
 
         var count = Math.abs((endPercent - startPercent) / 0.01);
         var step = endPercent < startPercent ? -0.01 : 0.01;
@@ -26,7 +26,6 @@
             .startAngle(0)
             .innerRadius(radius)
             .outerRadius(radius - border);
-
         var parent = d3.select(element);
 
         var svg = parent
@@ -41,7 +40,7 @@
         filter
             .append('feGaussianBlur')
             .attr('in', 'SourceGraphic')
-            .attr('stdDeviation', '7');
+            .attr('stdDeviation', '3');
 
         var g = svg
             .append('g')

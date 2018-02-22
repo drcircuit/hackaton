@@ -45,12 +45,8 @@ body {
   margin-top: 5vh;
 }
 
-#fundingImg {
-  height: 10vh;
-  width: 10vh;
-  position: absolute;
-  bottom: 0px;
-  left: 22px;
+#projWrapper {
+  position: relative;
 }
 
 .projTitle {
@@ -65,4 +61,12 @@ body {
   color: white;
   display: block;
   width: 100%;
+}
+
+.fundingImg {
+  height: 10vh;
+  width: 10vh;
+  position: absolute;
+  bottom: 20px;
+  left: 22px;
 }

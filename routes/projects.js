@@ -3,7 +3,9 @@ let rand = gen.create()
 const mongoDb = require("mongodb")
 const user = require("../repositories/user.js")()
 const util = require("../repositories/util.js")
-
+let EthereumQRPlugin = require('ethereum-qr-code');
+const qr = new EthereumQRPlugin();
+console.log(qr)
 
 module.exports = (db, contracts) => {
     const express = require("express");
@@ -129,10 +131,17 @@ module.exports = (db, contracts) => {
             } else {
                 // Create a "random" (this is not very safe) id that you can use for funding
                 let mu = user.getUser(req)
-                
+                let id = mu._id
+                if(req.query.user) {
+                    id = req.query.user
+                }
                 let mr = rand(1e10)
-                db.createFundMap(pid, "a" + mr, mu.id).then(ra => {
-                    res.json({"contract": r.contract,"tempid": mr})
+                db.createFundMap(pid, "a" + mr, id).then(ra => {
+                    console.log("getting the qr", )
+                    qr.toDataUrl({to: r.contract},{size: 300})
+                        .then(q => {
+                            res.json({"contract": r.contract,"tempid": mr, qr:q.dataURL})
+                        })
                 })
             }
         })

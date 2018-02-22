@@ -1,19 +1,19 @@
 <div class="container">
   <div class="row">
     <div class="imgWithText">
-      <img class="col" src="./img/banner.png"/>
+      <img class="col-sm-12 col-md-12" src="./img/banner.png"/>
       <div class="mainText">Help us help others</div>
-      <div id="sub1" class="subText">82% Something</div>
-      <div id="sub2" class="subText">15% thats right</div>
+      <div id="sub1" class="subText">9% of all donations goes to helth</div>
+      <div id="sub2" class="subText">100% trust on the blockchain</div>
     </div>
   </div>
 
   <div class="row">
-    <div class="col"><h3 class="header">CURRENT PROJECTS</h3></div>
+    <div class="col-sm-12 col-md-12"><h3 class="header">CURRENT PROJECTS</h3></div>
   </div>
 
   <div ng-repeat="row in projects" class="row twoProj">
-    <a ng-repeat="project in row" class="col-6" href="http://localhost:8080/#!/projects/{{project.id}}">
+    <a ng-repeat="project in row" class="col-sm-6 col-md-6" href="/#!/projects/{{project.id}}">
       <div ng-style="{'background-image' :'url(' + project.img + ')', 'background-repeat':'no-repeat', 'background-size': 'cover','height': '249px', 'padding': '0 5px 0 5px'}"  id="projWrapper">
       <div class="projTitle">{{project.title}}</div>
       <div class="fundingImg" id="id{{project.index}}" circle percent="{{project.percent}}"></div>

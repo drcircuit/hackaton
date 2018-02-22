@@ -65,8 +65,8 @@ margin-left: 0.8em;
 }
 
 .textcol {
-    padding-left: 5%;
-    padding-right: 5%;
+ /*   padding-left: 5%;
+    padding-right: 5%; */
 }
 
 .micon {
@@ -112,4 +112,16 @@ margin-left: 0.8em;
     font-size: 1rem;
     line-height: 1.5;
     color: #333;
+}
+
+@media only screen and (max-width: 800px) {
+   .es {
+        display: none;
+   }
+   .ek {
+       width: 100%;
+       min-width: 100%;
+          padding-left: 5%;
+          padding-right: 5%;
+   }
 }

@@ -6,6 +6,19 @@ body {
   font-size: 14px;
 }
 
+@media (min-width: 30em) {
+  .container {
+    max-width: 100%;
+  }
+  .fundingImg {
+    height: 10vh;
+    width: 10vh;
+    position: absolute;
+    bottom: 30%;
+    left: 1%;
+  }
+}
+
 .imgWithText {
   position: relative;
   text-align: center;
@@ -17,26 +30,26 @@ body {
 /*-------BANNER-------*/
 .mainText {
   position: absolute;
-  top: 12px;
-  left: 35px;
+  top: 20px;
+  left: 45px;
   font-size: 60px;
 }
 .subText {
-  font-size: 30px;
+  font-size: 24px;
   position: absolute;
-  color: #ae4b28;
+  color: black;
 }
 #sub1 {
-  bottom: 8vh;
-  left: 55vh;
+  bottom: 32%;
+  left: 20%;
 }
 #sub2 {
-  bottom: 15vh;
-  left: 45vh;
+  bottom: 20%;
+  left: 10%;
 }
 /*-------HEADER-------*/
 .header {
-  margin: 10vh 0 5vh 0;
+  margin: 20px 0 5px 0;
 }
 
 /*-------PROJECT-------*/
@@ -57,16 +70,15 @@ body {
   opacity: 0.7;
   font-size: 25px;
   text-align: right;
-  padding-right: 5vh;
+  padding-right: 25px;
   color: white;
   display: block;
   width: 100%;
 }
 
 .fundingImg {
-  height: 10vh;
-  width: 10vh;
+  height: 15px;
   position: absolute;
-  bottom: 20px;
-  left: 22px;
+  bottom: 37%;
+  left: 1%;
 }

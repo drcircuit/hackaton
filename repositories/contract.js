@@ -110,6 +110,7 @@ module.exports = (web3, public, pass) => {
             return contract.getPastEvents('Funding',{fromBlock: 0,
                 toBlock: 'latest'})
                 .then(e => {
+                    console.log("evs", e)
                     return e.map(e => {
                         return {
                             from: e.returnValues.backer,

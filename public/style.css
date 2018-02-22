@@ -1,0 +1,68 @@
+/*-------GENERAL-------*/
+
+body {
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans',
+    'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+}
+
+.imgWithText {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/*-------NAVBAR-------*/
+
+/*-------BANNER-------*/
+.mainText {
+  position: absolute;
+  top: 12px;
+  left: 35px;
+  font-size: 60px;
+}
+.subText {
+  font-size: 30px;
+  position: absolute;
+  color: #ae4b28;
+}
+#sub1 {
+  bottom: 8vh;
+  left: 55vh;
+}
+#sub2 {
+  bottom: 15vh;
+  left: 45vh;
+}
+/*-------HEADER-------*/
+.header {
+  margin: 10vh 0 5vh 0;
+}
+
+/*-------PROJECT-------*/
+
+.twoProj {
+  margin-top: 5vh;
+}
+
+#fundingImg {
+  height: 10vh;
+  width: 10vh;
+  position: absolute;
+  bottom: 0px;
+  left: 22px;
+}
+
+.projTitle {
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+  background-color: black;
+  opacity: 0.7;
+  font-size: 25px;
+  text-align: right;
+  padding-right: 5vh;
+  color: white;
+  display: block;
+  width: 100%;
+}

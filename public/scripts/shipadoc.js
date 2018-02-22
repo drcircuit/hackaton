@@ -98,7 +98,7 @@
 
     angular
         .module('shipadoc', ['ngRoute', "ui.bootstrap.modal"])
-        .value('apiUri', 'http://localhost:8080/api/')
+        .value('apiUri', '/api/')
         .directive('circle', function () {
             return {
                 link: function (scope, element, attrs) {

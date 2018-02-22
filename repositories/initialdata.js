@@ -28,7 +28,7 @@ module.exports = {
       location: 'Mount Mayon, Phillipines',
       doctorsNeeded: 6,
       description:
-        'Mount Mayon, which is located on the big island of Luzon, has been spewing ash, rocks, and mud since January 13 as it prepares to erupt in what is expected to be a big way. On Monday, the Philippine Institute of Volcanology and Seismology raised the alert level to four out of five possible levels, meaning a sizable eruption could happen at any moment.',
+        '#Mount Mayon Vulcano Eruption \nMount Mayon, which is located on the big island of Luzon, has been spewing ash, rocks, and mud since January 13 as it prepares to erupt in what is expected to be a big way. On Monday, the Philippine Institute of Volcanology and Seismology raised the alert level to four out of five possible levels, meaning a sizable eruption could happen at any moment. \n \n On the evening of 14 January, the Philippine Institute of Volcanology and Seismology (PHILVOLCS) raised Mayon Volcano’s alert level from II to III, signifying that Mayon has increased tendency towards hazardous eruption. On the morning of 15 January 2018, two lava collapse events occurred in the volcano, producing rockfall and small-volume pyroclastic density currents. Ash clouds were also produced with ashfalls reported in 29 villages (barangays) in the municipalities of Camalig and Guinobatan in the southwest of the volcano. Furthermore, on 16 January, lava flow and more rockfall events and short pyroclastic flows were also observed. PHILVOLCS recommended that the 6-km permanent danger zone and a 7-km extended danger zone be enforced due to the danger of rockfalls, landslides and sudden explosions or dome collapse that may generate hazardous volcanic flows. As a result of the heightened alert level, precautionary evacuations have been conducted in 25 villages (barangays) in 3 municipalities and 2 cities. As of 15 January, a total of 5,318 families (21,823 people) have been displaced, with 4,134 families (16,877) staying in 18 evacuation centres.',
       status: 'planned',
       contract: '0xE39b60a11dBf7CA072572eFf91292061A3CA983f',
       interested: ['d1', 'd2', 'd3']
@@ -52,17 +52,17 @@ module.exports = {
     },
     {
       _id: 'projid69',
-      title: 'African Outbreak',
+      title: 'Zambia: Cholera Outbreak',
       short_description:
-        'This is a short intro text that can be seen on the landing page',
+        'The cholera outbreak in Zambia continues to evolve',
       logo: 'http://localhost:8080/img/docsnoborderslogo.png',
       img: 'http://localhost:8080/img/docsnoborders.jpg',
       bigimg: 'http://localhost:8080/img/docsnobordersbig.jpg',
-      country: 'Norway',
-      location: 'Middlefart, Denmark',
-      doctorsNeeded: 3,
+      country: 'Zambia',
+      location: 'Zambia',
+      doctorsNeeded: 10,
       description:
-        '#big project \nThis is the long text to show, formated as markdown?',
+        '#The cholera outbreak reached its peak in week 1 of 2018 \nOn 6 October 2017, the Minister of Health declared an outbreak of cholera in the Zambian capital, Lusaka. From 28 September through 7 December 2017, 547 cases including 15 deaths (case fatality rate = 1.8%), have been reported since the beginning of the outbreak. The initial outbreak period was from 28 September through 20 October. From 21 October through 4 November 2017 there were less than five cases reported each week. However, from 5 November 2017 an increase in the number of cases was observed with a total of 136 cases reported in the week beginning 26 November...The cholera outbreak initially started in the Chipata sub-district and spread to Kanyama sub-district around 9 October 2017. The outbreak has spread from the peri-urban townships on the Western side of Lusaka City to the Eastern Side with a new case reported in Chelstone sub-district. As of 7 December, the affected sub-districts include Chipata, Kanyama, Chawama, Matero, Chilenje and Chelston. Sixty-two cases are currently receiving treatment in Cholera Treatment Centres in Chipata, Kanyama, Matero and Bauleni. One third of the cases are children under five years old and two thirds are persons five years and older. (WHO, 11 Dec 2017) \n\n The cholera outbreak in Zambia continues to evolve, especially in Lusaka District where there is high transmission intensity. Since our last report on 8 December 2017 (Weekly Bulletin 49), a total of 162 new suspected cases, with five deaths (case fatality rate 3.1%), have been reported. (WHO, 15 Dec 2017) \n\n The cholera outbreak in Lusaka District, Zambia, reached its peak in week 1 of 2018, with more than 650 cases per week. Since then, the weekly number of cases has decreased to 337 new cases with two deaths (case fatality rate 0.6%) reported from 14-20 January 2018 compared with 636 new cases with 13 deaths (case fatality rate 2.0%) in the previous week. As of 23 January 2018, a cumulative total of 3 635 cases with 78 deaths (case fatality rate 2.1%) have been reported. (WHO, 26 Jan 2018)\n\nThe cholera outbreak in Zambia is steadily declining since peaking in week 1 of 2018, with more than 650 cases. During week 6 (week ending 11 February 2018), a total of 110 new suspected cholera cases and one death were reported, compared to 140 cases and one death in week 5. By 12 February 2018, 39 patients were admitted and being treated in five cholera treatment centres (CTCs) across the country (31 of the cases were in four CTCs within Lusaka district). (WHO, 16 Feb 2018)',
       status: 'planned',
       contract: '0x07031fC188D25Da59f3F7c288812B557fb135A36',
       interested: ['d1', 'd2', 'd3']

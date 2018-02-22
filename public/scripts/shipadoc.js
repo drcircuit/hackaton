@@ -9,14 +9,14 @@
         var color = colors.green;
 
         var radius = radius || 50;
-        var border = 5;
+        var border = 3;
         var padding = radius / 2;
         var startPercent = 0;
         var endPercent = progress;
 
         var twoPi = Math.PI * 2;
         var formatPercent = d3.format('.0%');
-        var boxSize = (radius + padding) * 2;
+        var boxSize = (radius + padding) * 2.2;
 
         var count = Math.abs((endPercent - startPercent) / 0.01);
         var step = endPercent < startPercent ? -0.01 : 0.01;
@@ -26,7 +26,6 @@
             .startAngle(0)
             .innerRadius(radius)
             .outerRadius(radius - border);
-
         var parent = d3.select(element);
 
         var svg = parent
@@ -41,7 +40,7 @@
         filter
             .append('feGaussianBlur')
             .attr('in', 'SourceGraphic')
-            .attr('stdDeviation', '7');
+            .attr('stdDeviation', '3');
 
         var g = svg
             .append('g')
@@ -181,6 +180,7 @@
             '$timeout',
             'api',
             function ($scope, $params, $timeout, api) {
+                var previousProgress = 0;
                 var load = function(){
                     api.project($params.id)
                         .then(function (res) {
@@ -190,21 +190,21 @@
                             $scope.project.requested = Number($scope.project.requested).toFixed(
                                 2
                             );
+                            $scope.project.due = moment($scope.project.due_date*1000);
+                            $scope.project.daysLeft = $scope.project.due.diff(moment(),'days');
                             $scope.progress =
                                 Number($scope.project.funded) / Number($scope.project.requested);
                             var converter = new showdown.Converter();
                             $scope.project.description = converter.makeHtml(
                                 $scope.project.description
                             );
-                            $('div#content').empty();
-                            createProgress($scope.progress, 'div#content', 50);
-                            api.fund($params.id)
-                                .then(function(res){
-                                    console.log(res);
-                                })
-                                .catch(function(err){
-                                    console.log(err);
-                                });
+
+                            if($scope.progress - previousProgress > 0.01) {
+                                console.log("hi");
+                                $('div#content').empty();
+                                createProgress($scope.progress, 'div#content', 50);
+                                previousProgress = $scope.progress;
+                            }
                             Promise.all($scope.project.interested.map(function (d) {
                                 return api.doctor(d);
                             }))
@@ -221,9 +221,16 @@
                         .catch(function (err) {
                             console.log(err);
                         });
-                    $timeout(load, 2000);
+                    //$timeout(load, 10000);
                 };
-
+                $scope.showDoctor = function(doctor){
+                    console.log(doctor);
+                    $scope.showDoctorModal = true;
+                    $scope.selectedDoctor = doctor;
+                };
+                $scope.closeDoctor = function(){
+                    $scope.showDoctorModal = false;
+                }
                 $scope.open = function () {
                     $scope.showModal = true;
                 };
@@ -236,7 +243,13 @@
                     $scope.showModal = false;
                 };
                 load();
-
+                api.fund($params.id)
+                    .then(function(res){
+                        $scope.funding = res.data;
+                    })
+                    .catch(function(err){
+                        console.log(err);
+                    });
 
             }
         ]);

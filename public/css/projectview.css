@@ -1,13 +1,13 @@
 .project-single{
     width: 100%;
     position: absolute;
-    top: 480px;
+    top: 550px;
 
 }
 .project-single .imgbox{
     position: relative;
     left: 0;
-    bottom: 0;
+    bottom: 1em;
     background: rgba(0,0,0,0.7);
     width: 100%;
     display: block;
@@ -44,4 +44,72 @@
 
 .btn{
     margin: 10px;
+}
+
+.doccol img {
+    border-radius: 2em;
+    width: 4em;
+    height: 4em;
+    margin-bottom: 0.8em;
+}
+.doccol {
+    text-align: left;
+    /*overflow: hidden;*/
+}
+.doccol > *:first-child {
+padding-top: 1em;
+margin-left: 0.8em;
+}
+.doccol > * {
+    margin-left: 1.2em;
+}
+
+.textcol {
+ /*   padding-left: 5%;
+    padding-right: 5%; */
+}
+
+.micon {
+    
+}
+
+.iconsrow {
+    text-align: center;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons
+
+.micon span {
+    display: block";
+}
+
+.mbtn {
+
+}
+
+.mainrow {
+    margin-top: 2.5em;
+}
+
+.mainrow p {
+    text-align: justify;
+}
+
+.mainrow h1 {
+    text-align: center;
+}
+
+.dleft {
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    padding: .375rem .75rem;
+    padding-right: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
 }

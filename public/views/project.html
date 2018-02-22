@@ -1,59 +1,82 @@
 <div class="jumbotron jumbotron-fluid"
      ng-style="{'background-image' :'url(' + project.bigimg + ')', 'height': '549px'}">
     <div class="project-single">
-        <div class="imgbox">
+        <div class="imgbox imgtop">
             <h1>{{project.title}}</h1>
             <div id="content"></div>
         </div>
         <img class="logo" src="{{project.logo}}" alt="">
-        <div class="row">
-            <div class="col-2">
+        <div class="row iconsrow">
+            <div class="micon">
                 <img class="icon" src="./img/doctorsicon.png" alt="">
                 <span>{{project.doctorsNeeded}} doctors</span>
             </div>
-            <div class="col-2">
+            <div class="micon">
                 <img class="icon" src="./img/fundersicon.png" alt="">
                 <span>{{project.funders.length}} funders</span>
             </div>
-            <div class="col-2">
+            <div class="micon">
                 <img class="icon" src="./img/fundingicon.png" alt="">
                 <span>{{project.requested}} ETH target</span>
             </div>
-            <div class="col-2">
+            <div class="micon">
                 <img class="icon" src="./img/fundingicon.png" alt="">
                 <span>{{project.raised}} ETH raised</span>
             </div>
-            <div class="col-4">
+        </div>
+        <div class="row iconsrow lrt">
+            <div class=" dleft">
+                Only {{project.daysLeft}} days left, please
+            </div>
+            <div class="mbtn">
                 <button type="button" class="btn btn-primary" ng-click="open()" data-toggle="modal"
                         data-target="#exampleModalLive">
-                    Launch demo modal
+                    CONTRIBUTE
                 </button>
             </div>
         </div>
-        <div class="row">
+        <div class="row mainrow">
 
-            <div class="col-9">
+            <div class="col-3 doccol">
+                <h4>Doctors</h4>
+                <div ng-repeat="doctor in doctors">
+                    <a ng-click="showDoctor(doctor)">
+                        <img class="doctor-profile-img img-circle" src="{{doctor.image_url}}" alt="">
+                        <i>{{doctor.first_name}} {{doctor.last_name}} {{doctor.title}}</i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 textcol">
                 <p ng-bind-html="project.description | to_trusted"></p>
             </div>
-            <div class="col-3">
-                <h4>Interested doctors</h4>
-                <div ng-repeat="doctor in doctors">
-                    <img src="{{doctor.image_url}}" alt="">
-                </div>
+            <div class="col-3"></div>
             </div>
         </div>
     </div>
     <div class="modal-dialog" ng-show="showModal" close="cancel()">
         <div class="modal-content">
             <div class="modal-header">
-                <h4>Modal Dialog</h4>
+                <h4>Contribute to {{project.title}}</h4>
             </div>
             <div class="modal-body">
-                <p>Example paragraph with some text.</p>
+                <img src="{{funding.qr}}" alt="">
+                <p><strong>{{funding.contract}}</strong></p>
+                <p><strong>{{funding.tempid}}</strong></p>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-success" ng-click="ok()">Okay</button>
-                <button class="btn" ng-click="cancel()">Cancel</button>
+                <button class="btn btn-success" ng-click="ok()">CLOSE</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-dialog" ng-show="showDoctorModal" close="cancel()">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="{{selectedDoctor.image_url}}" alt=""/>
+                <h4>{{selectedDoctor.first_name}} {{selectedDoctor.last_name}} {{selectedDoctor.title}}</h4>
+                <p>{{selectedDoctor.bio}}</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" ng-click="closeDoctor()">CLOSE</button>
             </div>
         </div>
     </div>

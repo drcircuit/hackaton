@@ -9,13 +9,11 @@ body {
 @media (min-width: 30em) {
   .container {
     max-width: 100%;
+    padding: 0px;
+    margin: 0px;
   }
-  .fundingImg {
-    height: 10vh;
-    width: 10vh;
-    position: absolute;
-    bottom: 30%;
-    left: 1%;
+  .col-sm-12 {
+    padding-right: 0px;
   }
 }
 
@@ -40,22 +38,22 @@ body {
   color: black;
 }
 #sub1 {
-  bottom: 32%;
-  left: 20%;
+  bottom: 46%;
+  left: 27%;
 }
 #sub2 {
-  bottom: 20%;
-  left: 10%;
+  bottom: 32%;
+  left: 18%;
 }
 /*-------HEADER-------*/
 .header {
-  margin: 20px 0 5px 0;
+  margin: 5% 3% 0% 3%;
 }
 
 /*-------PROJECT-------*/
 
 .twoProj {
-  margin-top: 5vh;
+  margin: 5% 2%;
 }
 
 #projWrapper {

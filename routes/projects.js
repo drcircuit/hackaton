@@ -3,7 +3,9 @@ let rand = gen.create()
 const mongoDb = require("mongodb")
 const user = require("../repositories/user.js")()
 const util = require("../repositories/util.js")
-
+let EthereumQRPlugin = require('ethereum-qr-code');
+const qr = new EthereumQRPlugin();
+console.log(qr)
 
 module.exports = (db, contracts) => {
     const express = require("express");
@@ -98,6 +100,9 @@ module.exports = (db, contracts) => {
                 return fillProject(it)
             })
             Promise.all(r).then(a => {
+                a.sort((b, c) => {
+                    b.due_date - c.due_date
+                })
                 res.json(a)
             })
         })
@@ -135,7 +140,11 @@ module.exports = (db, contracts) => {
                 }
                 let mr = rand(1e10)
                 db.createFundMap(pid, "a" + mr, id).then(ra => {
-                    res.json({"contract": r.contract,"tempid": mr})
+                    console.log("getting the qr", )
+                    qr.toDataUrl({to: r.contract},{size: 300})
+                        .then(q => {
+                            res.json({"contract": r.contract,"tempid": mr, qr:q.dataURL})
+                        })
                 })
             }
         })

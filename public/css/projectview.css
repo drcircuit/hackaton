@@ -7,7 +7,6 @@
 .project-single .imgbox{
     position: relative;
     left: 0;
-    bottom: 1em;
     background: rgba(0,0,0,0.7);
     width: 100%;
     display: block;
@@ -15,13 +14,16 @@
     text-align: right;
     width: 100%;
     color: white;
+
+    top: -40px;
+    margin-bottom: 2em;
 }
 
 .project-single .logo{
     position: absolute;
-    top: -40px;
-    left: 14px;
+    top: -60px;
     width: 260px;
+    left: 14px;
 
 }
 .progress-meter text {
@@ -125,3 +127,14 @@ margin-left: 0.8em;
           padding-right: 5%;
    }
 }
+@media only screen and (max-device-width: 800px) {
+    .es {
+         display: none;
+    }
+    .ek {
+        width: 100%;
+        min-width: 100%;
+           padding-left: 5%;
+           padding-right: 5%;
+    }
+ }

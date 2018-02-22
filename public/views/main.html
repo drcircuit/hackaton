@@ -13,7 +13,7 @@
   </div>
 
   <div ng-repeat="row in projects" class="row twoProj">
-    <a ng-repeat="project in row" class="col-sm-12 col-md-6" href="http://localhost:8080/#!/projects/{{project.id}}">
+    <a ng-repeat="project in row" class="col-sm-6 col-md-6" href="/#!/projects/{{project.id}}">
       <div ng-style="{'background-image' :'url(' + project.img + ')', 'background-repeat':'no-repeat', 'background-size': 'cover','height': '249px', 'padding': '0 5px 0 5px'}"  id="projWrapper">
       <div class="projTitle">{{project.title}}</div>
       <div class="fundingImg" id="id{{project.index}}" circle percent="{{project.percent}}"></div>

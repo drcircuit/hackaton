@@ -25,7 +25,7 @@ contract Project {
     bool closed = false;
 
     event Reached(address recipient, uint totalraised);
-    event Funding(address backer, uint amount, uint id);
+    event Funding(address backer, address back, uint amount, uint myid);
 
     // Constructor for creating a new project
     function Project(
@@ -54,7 +54,7 @@ contract Project {
         if (id > 0) {
             pledges[id] += amount;
         }
-        Funding(msg.sender, amount, id);
+        Funding(msg.sender,msg.sender,amount, id);
     }
 
     // Default function which we let be the same thing as

@@ -7,7 +7,7 @@
 .project-single .imgbox{
     position: relative;
     left: 0;
-    bottom: 0;
+    bottom: 1em;
     background: rgba(0,0,0,0.7);
     width: 100%;
     display: block;
@@ -44,4 +44,20 @@
 
 .btn{
     margin: 10px;
+}
+
+.doccol img {
+    border-radius: 2em;
+    width: 4em;
+    height: 4em;
+    margin-bottom: 0.8em;
+}
+.doccol {
+    text-align: center;
+}
+
+.textcol {
+    padding-left: 5%;
+
+    padding-right: 5%;
 }

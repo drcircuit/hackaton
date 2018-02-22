@@ -22,6 +22,8 @@ body {
   position: relative;
   text-align: center;
   color: white;
+  max-width: 100%;
+  width: 100%;
 }
 
 /*-------NAVBAR-------*/

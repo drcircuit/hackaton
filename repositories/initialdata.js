@@ -35,7 +35,7 @@ module.exports = {
     },
     {
       _id: 'projid42',
-      title: 'Food Insecurity in South Sudan',
+      title: 'Food Insecurity',
       short_description:
         'This is a short intro text that can be seen on the landing page',
       logo: '/img/docsnoborderslogo.png',
@@ -53,8 +53,7 @@ module.exports = {
     {
       _id: 'projid69',
       title: 'Zambia: Cholera Outbreak',
-      short_description:
-        'The cholera outbreak in Zambia continues to evolve',
+      short_description: 'The cholera outbreak in Zambia continues to evolve',
       logo: '/img/docsnoborderslogo.png',
       img: '/img/docsnoborders.jpg',
       bigimg: '/img/docsnobordersbig.jpg',

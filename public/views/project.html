@@ -24,13 +24,36 @@
                 <span>{{project.raised}} ETH raised</span>
             </div>
             <div class="col-4">
-                <button class="float-right btn-lg btn btn-info">CONTRIBUTE</button>
+                <button type="button" class="btn btn-primary" ng-click="open()" data-toggle="modal"
+                        data-target="#exampleModalLive">
+                    Launch demo modal
+                </button>
             </div>
         </div>
         <div class="row">
-            <div class="col-2"></div>
-            <div class="col-10">
+
+            <div class="col-9">
                 <p ng-bind-html="project.description | to_trusted"></p>
+            </div>
+            <div class="col-3">
+                <h4>Interested doctors</h4>
+                <div ng-repeat="doctor in doctors">
+                    <img src="{{doctor.image_url}}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-dialog" ng-show="showModal" close="cancel()">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Modal Dialog</h4>
+            </div>
+            <div class="modal-body">
+                <p>Example paragraph with some text.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" ng-click="ok()">Okay</button>
+                <button class="btn" ng-click="cancel()">Cancel</button>
             </div>
         </div>
     </div>

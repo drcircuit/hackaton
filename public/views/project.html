@@ -41,7 +41,10 @@
             <div class="col-3 doccol">
                 <h4>Interested doctors</h4>
                 <div ng-repeat="doctor in doctors">
-                    <img class="doctor-profile-img img-circle"src="{{doctor.image_url}}" alt="">
+                    <a ng-click="showDoctor(doctor)">
+                        <img class="doctor-profile-img img-circle" src="{{doctor.image_url}}" alt="">
+                        <i>{{doctor.first_name}} {{doctor.last_name}} {{doctor.title}}</i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -58,6 +61,18 @@
             </div>
             <div class="modal-footer">
                 <button class="btn btn-success" ng-click="ok()">CLOSE</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-dialog" ng-show="showDoctorModal" close="cancel()">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="{{selectedDoctor.image_url}}" alt=""/>
+                <h4>{{selectedDoctor.first_name}} {{selectedDoctor.last_name}} {{selectedDoctor.title}}</h4>
+                <p>{{selectedDoctor.bio}}</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" ng-click="closeDoctor()">CLOSE</button>
             </div>
         </div>
     </div>

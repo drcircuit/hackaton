@@ -224,7 +224,14 @@
                         });
                     $timeout(load, 2000);
                 };
-
+                $scope.showDoctor = function(doctor){
+                    console.log(doctor);
+                    $scope.showDoctorModal = true;
+                    $scope.selectedDoctor = doctor;
+                };
+                $scope.closeDoctor = function(){
+                    $scope.showDoctorModal = false;
+                }
                 $scope.open = function () {
                     $scope.showModal = true;
                 };

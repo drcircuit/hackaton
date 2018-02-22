@@ -129,9 +129,12 @@ module.exports = (db, contracts) => {
             } else {
                 // Create a "random" (this is not very safe) id that you can use for funding
                 let mu = user.getUser(req)
-                
+                let id = mu._id
+                if(req.query.user) {
+                    id = req.query.user
+                }
                 let mr = rand(1e10)
-                db.createFundMap(pid, "a" + mr, mu.id).then(ra => {
+                db.createFundMap(pid, "a" + mr, id).then(ra => {
                     res.json({"contract": r.contract,"tempid": mr})
                 })
             }

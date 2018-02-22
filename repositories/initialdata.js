@@ -6,8 +6,8 @@ module.exports = {
       short_description:
         'Congo declared the ongoing outbreak of circulating vaccine- derived poliovirus in the country!',
       logo: 'http://localhost:8080/img/docsnoborderslogo.png',
-      img: 'http://localhost:8080/img/proj42.png',
-      bigimg: 'http://localhost:8080/img/prooj42big.png',
+      img: 'http://localhost:8080/img/proj42.jpg',
+      bigimg: 'http://localhost:8080/img/prooj42big.jpg',
       country: 'Congo',
       location: 'Lomami, Congo',
       status: 'planned',
@@ -39,8 +39,8 @@ module.exports = {
       short_description:
         'This is a short intro text that can be seen on the landing page',
       logo: 'http://localhost:8080/img/docsnoborderslogo.png',
-      img: 'http://localhost:8080/img/proj2.png',
-      bigimg: 'http://localhost:8080/img/proj2big.png',
+      img: 'http://localhost:8080/img/proj2.jpg',
+      bigimg: 'http://localhost:8080/img/proj2big.jpg',
       country: 'South Sudan',
       location: 'Middlefart, South Sudan',
       doctorsNeeded: 3,

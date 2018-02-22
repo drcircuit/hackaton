@@ -126,8 +126,8 @@
                     project: function (id) {
                         return $http.get(url + 'projects/' + id);
                     },
-                    fund: function(id){
-                        return $http.get(url + 'projects/' + id+"/fund");
+                    fund: function (id) {
+                        return $http.get(url + 'projects/' + id + "/fund");
                     },
                     doctor: function (id) {
                         return $http.get(url + 'doctors/' + id);
@@ -181,7 +181,24 @@
             'api',
             function ($scope, $params, $timeout, api) {
                 var previousProgress = 0;
-                var load = function(){
+
+                function loadDoctors(docs) {
+                    Promise.all(docs.map(function (d) {
+                        return api.doctor(d);
+                    }))
+                        .then(function (stuff) {
+                            $scope.doctors = stuff.map(function (d) {
+                                return d.data;
+                            });
+                            $scope.$digest();
+                            console.log($scope.doctors);
+                        })
+                        .catch(function (err) {
+                            console.log(err);
+                        });
+                }
+
+                var load = function () {
                     api.project($params.id)
                         .then(function (res) {
                             console.log(res.data);
@@ -190,8 +207,8 @@
                             $scope.project.requested = Number($scope.project.requested).toFixed(
                                 2
                             );
-                            $scope.project.due = moment($scope.project.due_date*1000);
-                            $scope.project.daysLeft = $scope.project.due.diff(moment(),'days');
+                            $scope.project.due = moment($scope.project.due_date * 1000);
+                            $scope.project.daysLeft = $scope.project.due.diff(moment(), 'days');
                             $scope.progress =
                                 Number($scope.project.funded) / Number($scope.project.requested);
                             var converter = new showdown.Converter();
@@ -199,36 +216,25 @@
                                 $scope.project.description
                             );
 
-                            if($scope.progress - previousProgress > 0.01) {
+                            if ($scope.progress - previousProgress > 0.01) {
                                 console.log("hi");
                                 $('div#content').empty();
                                 createProgress($scope.progress, 'div#content', 50);
                                 previousProgress = $scope.progress;
                             }
-                            Promise.all($scope.project.interested.map(function (d) {
-                                return api.doctor(d);
-                            }))
-                                .then(function (stuff) {
-                                    console.log(stuff);
-                                    $scope.doctors = stuff.map(function(d){
-                                        return d.data;
-                                    });
-                                })
-                                .catch(function (err) {
-                                    console.log(err);
-                                });
+                            loadDoctors($scope.project.interested);
                         })
                         .catch(function (err) {
                             console.log(err);
                         });
                     //$timeout(load, 10000);
                 };
-                $scope.showDoctor = function(doctor){
+                $scope.showDoctor = function (doctor) {
                     console.log(doctor);
                     $scope.showDoctorModal = true;
                     $scope.selectedDoctor = doctor;
                 };
-                $scope.closeDoctor = function(){
+                $scope.closeDoctor = function () {
                     $scope.showDoctorModal = false;
                 }
                 $scope.open = function () {
@@ -244,10 +250,10 @@
                 };
                 load();
                 api.fund($params.id)
-                    .then(function(res){
+                    .then(function (res) {
                         $scope.funding = res.data;
                     })
-                    .catch(function(err){
+                    .catch(function (err) {
                         console.log(err);
                     });
 

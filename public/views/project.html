@@ -39,9 +39,10 @@
 
             <div class="col-3 doccol es">
                 <h4>Doctors</h4>
+                {{stuff}}
                 <div ng-repeat="doctor in doctors">
                     <a ng-click="showDoctor(doctor)">
-                        <img class="doctor-profile-img img-circle" src="{{doctor.image_url}}" alt="">
+                        <img class="doctor-profile-img img-circle" ng-src="{{doctor.image_url}}" alt="">
                         <i>{{doctor.first_name}} {{doctor.last_name}} {{doctor.title}}</i>
                     </a>
                 </div>
@@ -59,7 +60,7 @@
                 <h4>Contribute to {{project.title}}</h4>
             </div>
             <div class="modal-body">
-                <img src="{{funding.qr}}" alt="">
+                <img ng-src="{{funding.qr}}" alt="">
                 <p><strong>{{funding.contract}}</strong></p>
                 <p><strong>{{funding.tempid}}</strong></p>
             </div>
@@ -71,7 +72,7 @@
     <div class="modal-dialog" ng-show="showDoctorModal" close="cancel()">
         <div class="modal-content">
             <div class="modal-header">
-                <img src="{{selectedDoctor.image_url}}" alt=""/>
+                <img ng-src="{{selectedDoctor.image_url}}" alt=""/>
                 <h4>{{selectedDoctor.first_name}} {{selectedDoctor.last_name}} {{selectedDoctor.title}}</h4>
                 <p>{{selectedDoctor.bio}}</p>
             </div>

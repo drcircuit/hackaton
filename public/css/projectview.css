@@ -99,6 +99,10 @@ margin-left: 0.8em;
     text-align: justify;
 }
 
+.mainrow h1 {
+    text-align: center;
+}
+
 .dleft {
     font-weight: 400;
     text-align: center;

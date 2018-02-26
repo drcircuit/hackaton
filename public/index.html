@@ -17,8 +17,24 @@
         <script src="./bower_components/angular-bootstrap/ui-bootstrap.js"></script>
         <script src="./bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
         <script src="./bower_components/moment/moment.js"></script>
+        <style>
+        .watermark {
+          position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    left: 50%;
+    top: 50%;
+    z-index: 100;
+    transform: translate(-50%, -50%) rotate(-35deg);
+    font-size: 4rem;
+    font-weight: bold;
+    opacity: 0.3;
+    pointer-events: none;
+        }
+        </style>
     </head>
     <body>
+      <div class="watermark">THIS IS A DEMO</div>
       <div class="container">
         <nav class="row navbar navbar-expand-lg navbar-light ">
           <a href="#" class="col-sm-1 col-md-1"><img id="profileImg" src="./img/ntl.svg"/></a>
